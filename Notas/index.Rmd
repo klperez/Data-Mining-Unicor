@@ -1,0 +1,1516 @@
+---
+title       : Introducción a la minería de datos 
+subtitle    : Una breve introdución
+author      : Kevin Pérez - Ing de Sistemas - Estadístico
+job         : Departamento de Matemáticas y Estadística - Universidad de Córdoba
+logo        : unicordoba3.png
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+## Contenido 
+
+> + Una breve introducción 
+    - Por que minería de datos?
+    - Que es minería de datos?
+    - Minería de datos: Un proceso de descubrimiento del conocimiento (kdd)
+    - Minería de datos: Una visión multidimensional
+        * Minería de datos desde el punto de vista de los datos
+        * Minería de datos desde el punto de vista del conocimiento
+        * Minería de datos desde el punto de vista metodológico
+        * Minería de datos desde el punto de vista de la aplicación.
+        
+
+
+
+---
+
+
+
+
+## Contenido 
+
+> + Obtención y Manipulación de datos 
+    - Datos en bruto y procesado
+    - Componentes de los datos ordenados.
+    - Obtención de datos locales.
+    - Lectura desde bases de datos.
+    - Leyendo datos de la web y redes sociales. 
+    - Indexación, ordenado y resumen de datos.
+    - Reorganización y fusionado de datos
+    - Trabajando con fechas, edición de textos y expresiones regulares. 
+
+
+
+---
+
+
+
+## Contenido 
+
+> + Algoritmos de modelado de datos 
+    - Descubrimiento de patrones en data mining. 
+    - Concepto de clúster, técnicas de clúster en data mining y clúster en grandes dimensiones.
+    - Concepto de asociación y correlación en data mining, técnicas de asociación y correlación en data mining.
+    - Regresión conceptos en data mining, técnicas de regresión en data mining  
+    - Algoritmos del machine learning en data mining (Redes neuronales, algoritmos genéticos y procesos de simulación).
+
+
+
+---
+
+
+
+## Contenido
+
+> + Validación y selección de modelos en data mining
+   - Diseño de estudio de validación
+   - Validación cruzada, error de muestreo e importancia relativa    
+   - Validación, selección e interpretación de patrones en data mining
+   - Data de entrenamiento 
+   - Visualización de patrones en data mining. 
+
+
+
+---
+
+
+
+## Contenido 
+
+> + Visualización de datos
+    - Introducción a la visualización de datos
+    - Visualización de datos numéricos
+    - Visualización de datos no numéricos 
+    - Tableros de visualización de datos.
+    
+    
+
+---
+
+
+## Contenido
+
+> + Tex mining
+    - Recolección de información de texto e ingeniería de búsquedas.
+    - Procesado natural del lenguaje (NPL).
+    - Asociación de palabras, análisis de tópicos en textos y análisis de sentimientos.
+    - Modelos de predicción en tex mining.
+
+
+
+---
+
+
+
+## Por que minería de datos?
+
+> - Crecimiento explosivo de los datos 
+    * Explosión de los datos: Nuestra capacidad de generar , recopilar, almacenar, y gestionar datos ha crecido enormemente en los últimos 50 años
+    * Las principales fuentes de datos 
+        + Web y la sociedad de información : Noticias, medios digitales , redes sociales , el comercio electrónico, transacciones , acciones, ...
+        + Ciencia e ingeniería : La teledetección , bioinformática , simulación científica, ...
+    * Nos estamos ahogando en datos, pero hambrientos de conocimiento!
+    
+
+
+---
+
+
+
+
+## Que es la minería de datos?
+
+- Minería de datos: descubrieminto del conocimiento a partir de los datos (kdd)
+
+    * Extración de interesantes (no triviales, implícitos, previamente desconocidos y potencialmente útil) 
+    patrones o conocimientos de datos masivos 
+    * La minería de datos: Un nombre inapropiado?
+        + La minería del conocimiento a partir de datos!
+    * La minería de datos: Su relación con otras disciplinas
+        + Aprendizaje automático, reconocimiento de patrones, estadística, bases de datos,
+inteligencia de negocios, Big Data, ...
+
+---    
+
+## Minería de datos: Un proceso de descubrimiento del conocimiento (kdd) 
+
+<img class=center src="/home/kevin/Documentos/Clases Unicor/Data Mining/Notas/assets/img/datamining12.png" height=450 width=900>
+
+
+---
+
+
+## Minería de datos: Una visión multidimensional
+
+> - La minería de datos se puede ver desde varios ángulos
+    * Los datos que se extraen
+    * El conocimiento que se extrae
+    * Metodologías o técnicas utilizadas
+    * Aplicaciones adaptadas
+
+---
+
+
+## Punto de vista de los datos: ¿Qué tipo de datos?
+
+> - Datos estructurados y semi-estructurados 
+    * Datos relacionales/datos de objeto-relacionales
+    * Datos de bodegas de datos
+    * Datos transaccionales 
+    
+> - Datos estructurados
+    * Datos de texto y datos de la web
+    * Datos espaciales y espaciotemporales
+    * Datos de multimedia 
+    * Datos de flujos y sensores 
+    * Datos de series de tiempo y datos secuenciales 
+    * Grafos, redes sociales y redes de información
+    
+
+---
+
+## Punto de vista del conocimiento: Conocimiento a extraer
+
+> - Resumen de datos en espacios multidimiencionales 
+    * Cubos de datos y OLAP (On-Line Analytical Processing)
+> - Descubrimiento de patrones 
+    * Minería de patrones frecuentes, asociación y correlación
+> - Modelos de clasificación y modelos predictivos
+    * Construcción de modelos sobre la base de algunos ejemplos 
+    * Predicción de nuevos datos basados en modelos construidos
+> - Análisis de cluster: Cómo agrupar datos para formar nuevas categorías?
+> - Análisis de outlier: El descubrimiento de anomalías y eventos raros
+> - Tendencias y análisis de evolución
+
+
+
+
+---
+
+
+## Punto de vista metdológico: Confluencia de multiples disciplinas 
+
+<img class=center src="/home/kevin/Documentos/Clases Unicor/Data Mining/Notas/assets/img/9.png" height=400 width=900>
+
+
+---
+
+
+## Puntos de vista aplicativo: Diversidad de aplicaciones
+
+> - Minería de texto y minería en la web
+    * Clasificación de paginas web, análisis de Weblog, sistemas de recomendación
+, etc
+
+> - Minería en datos de negocios 
+    * Datos transaccionales, market basket analysis, detección de fraude, etc
+> - La minería de datos e ingeniería de software, ej: minando bugs en software
+> - Extrayendo datos biologicos y medicos
+    * Genes, proteinas, redes biologicas
+> - Minando información de redes sociales 
+
+
+
+---
+
+
+## Get/set tu directorio de trabajo 
+
+* Un componente básico de trabajar con datos es conocer su directorio de trabajo
+* Los dos comandos principales son ```getwd()``` y ```setwd()```. 
+* Tenga en cuenta las rutas relatvias vs las absolutas
+  * __Relativa__ - ```setwd("./data")```, ```setwd("../")```
+  * __Absoluta__ - ```setwd("/Users/name/data/")```
+* Diferencia importante en Windows ```setwd("C:\\Users\\Name\\Downloads")```
+
+---
+
+## Comprobación y creación de directorios
+
+* ```file.exists("NombreDirectorio")``` comprueba si existe el directorio
+* ```dir.create("NombreDirectorio")``` creará un directorio si no existe
+* Aquí un ejemplo de comprobación del directeorio "data" y su creación si no existe 
+
+```{r Data}
+if(!file.exists("Data")){
+  dir.create("Data")
+}
+```
+
+---
+
+## Obteniendo datos de internet - download.file()
+
+* Descarga un archivo de internet
+* Incluso si se pudiera hacer esto a mano, ayuda con la reproducibilidad
+* Los parámetros importantes son  **_url_**, **_destfile_**, **_method_**
+* Útil para la descarga de **_delimitados-tab_**, **_csv_**, y otros archivos
+
+---
+
+## Ejemplo - Baltimore camera data
+
+
+<img class=center src="/home/kevin/GettingData/assets/img/cameras.png" height=500 width=700>
+
+[https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru](https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru)
+
+
+---
+
+## Ejemplo - Baltimore camera data
+
+<img class=center src="/home/kevin/GettingData/assets/img/cameraslink.png" height=500 width=700>
+
+[https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru](https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru)
+
+---
+
+## Descargando un archivo de la web
+
+```{r,dependson="data"}
+fileUrl <- "http://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD"
+download.file(fileUrl,destfile="/home/kevin/GettingData/Data/cameras.csv")
+list.files("/home/kevin/GettingData/Data")
+#dateDownloaded <- date()
+#dateDownloaded
+```
+
+---
+
+## Algunas notas sobre download.file()
+
+* Si la url comienza con _http_ puedes usar download.file()
+* Si la url comienza con _https_ en Windows puedes estar tranquilo
+* Si la url comienza con _https_ en Mac puede que tengas que configurar _method="curl"_
+* Si el archivo es muy grande, puede tomarte algún tiempo
+* Asegúrese de registrar la descarga
+
+---
+
+## XML
+
+* Extensible markup language
+* Frecuentemente utilizado para almacenar datos estructurados
+* Particularmente utilizado ampliamente en aplicaciones de internet
+* La extracción de XML es la base para la mayoría del web scraping
+* Componentes
+  * Markup - etiquetas que dan la estructura del texto
+  * Content - el texto real del documento
+
+[http://es.wikipedia.org/wiki/Extensible_Markup_Language](http://es.wikipedia.org/wiki/Extensible_Markup_Language)
+
+---
+
+## Etiquetas, elementos y atributos
+
+* Tags corresponden a las etiquetas generales
+  * Comienzo de tags `<section>`
+  * Fin de tags `</section>`
+  * Tags vacias `<line-break />`
+* Elements son ejemplos especificos de las tags
+  * `<Greeting> Hola, mundo </Greeting>`
+* Attributes son componentes de la etiqueta
+  * `<img src="kevin.jpg" alt="instructor"/>`
+  * `<step number="3"> Connect A to B. </step>`
+
+[http://es.wikipedia.org/wiki/Extensible_Markup_Language](http://es.wikipedia.org/wiki/Extensible_Markup_Language)
+
+---
+
+## Ejemplo de un archivo XML 
+
+<img class=center src="/home/kevin/GettingData/assets/img/xmlexample.png" height=500 width=700>
+
+
+[http://www.w3schools.com/xml/simple.xml](http://www.w3schools.com/xml/simple.xml)
+
+---
+
+## Leer el archivo en R
+
+```{r xmldata, cache=TRUE}
+library(XML)
+fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
+rootNode <- xmlRoot(doc)
+xmlName(rootNode)
+names(rootNode)
+```
+
+---
+
+## Acceder directamente a partes del documento XML
+
+```{r echo=FALSE, results='hide'}
+library(XML)
+fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
+rootNode <- xmlRoot(doc)
+xmlName(rootNode)
+names(rootNode)
+```
+
+```{r}
+rootNode[[1]]
+rootNode[[1]][[1]]
+```
+
+---
+
+## Extraer programáticamente partes del archivo
+
+```{r echo=FALSE, results='hide'}
+library(XML)
+fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
+rootNode <- xmlRoot(doc)
+xmlName(rootNode)
+names(rootNode)
+```
+
+
+```{r}
+xmlSApply(rootNode,xmlValue)
+```
+
+---
+
+## XPath
+
+* _/node_ Nodo de nivel superior
+* _//node_ Nodo en cualquier nivel
+* _node[@attr-name]_ Nodo con un nombre de atributo
+* _node[@attr-name='bob']_ Nodo con nombre de atributo attr-name='bob'
+
+Information from: [http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+
+---
+
+## Obtener los elementos en el menú y sus precios
+
+```{r echo=FALSE, results='hide'}
+library(XML)
+fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
+rootNode <- xmlRoot(doc)
+xmlName(rootNode)
+names(rootNode)
+```
+
+```{r}
+xpathSApply(rootNode,"//name",xmlValue)
+xpathSApply(rootNode,"//price",xmlValue)
+```
+
+---
+
+## Otro ejemplo
+
+
+<img class=center src="/home/kevin/GettingData/assets/img/ravens.png" height=500 width=700>
+
+[http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013](http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013)
+
+---
+
+## Viendo el código fuente 
+
+<img class=center src="/home/kevin/GettingData/assets/img/ravenssource.png" height=500 width=700>
+
+
+[http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013](http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013)
+
+---
+
+## Extrayendo el contenido por atributos 
+
+```{r htmldata}
+fileUrl <- "http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013"
+doc <- htmlTreeParse(fileUrl,useInternal=TRUE)
+scores <- xpathSApply(doc,"//li[@class='score']",xmlValue)
+teams <- xpathSApply(doc,"//li[@class='team-name']",xmlValue)
+scores
+teams
+```
+
+---
+
+## Notas y más recursos
+
+* Tutoriales oficiales de XML  [Resumido](http://www.omegahat.org/RSXML/shortIntro.pdf), [Completo](http://www.omegahat.org/RSXML/Tour.pdf)
+* [Una excelente guía  para el paquete XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+
+
+---
+
+
+## JSON
+
+* Javascript Object Notation
+* Almacenamiento de datos Ligero
+* Formato común para los datos de las interfaces de programación de aplicaciones (APIs)
+* Similar en estructura a XML pero con diferente sintaxis/formato
+* os datos son almacenados como
+  * Numbers (double)
+  * Strings (double quoted)
+  * Boolean (_true_ o _false_)
+  * Array (ordenado, separados por comas encerrados entre corchetes _[]_)
+  * Object (desordenados, separados por comas colección de clave: pares de valores entre llaves _{}_)
+
+[http://es.wikipedia.org/wiki/JSON](http://es.wikipedia.org/wiki/JSON)
+
+
+---
+
+## Example JSON file
+
+<img class=center src="/home/kevin/GettingData/assets/img/githubjson.png" height=600 width=900>
+
+
+---
+
+## Leyendo datos de JSON {jsonlite package}
+
+```{r readJSON, message=FALSE, warning=FALSE}
+library(jsonlite)
+jsonData <- fromJSON("https://api.github.com/users/jtleek/repos")
+head(jsonData$name, 22)
+```
+
+---
+
+## Objetos anidados en JSON
+
+```{r, message=FALSE, warning=FALSE, results='hide', echo=FALSE}
+library(jsonlite)
+jsonData <- fromJSON("https://api.github.com/users/jtleek/repos")
+```
+
+```{r}
+names(jsonData$owner)
+jsonData$owner$login
+```
+
+---
+
+## Escribiendo data frames como JSON
+
+```{r writeJSON}
+myjson <- toJSON(iris, pretty=TRUE)
+cat(myjson)
+```
+
+[http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/](http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/)
+
+
+---
+
+## Convertir de nuevo a JSON
+
+```{r, echo=FALSE}
+myjson <- toJSON(iris, pretty=TRUE)
+```
+
+
+```{r}
+iris2 <- fromJSON(myjson)
+head(iris2)
+```
+
+[http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/](http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/)
+
+---
+
+## Otros recursos
+
+* [http://www.json.org/](http://www.json.org/)
+* Un buen tutorial sobre jsonlite - [http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/](http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/)
+* [jsonlite vignette](http://cran.r-project.org/web/packages/jsonlite/vignettes/json-mapping.pdf)
+
+---
+
+
+## Application programming interfaces
+
+
+<img class=center src="/home/kevin/GettingData/assets/img/twitter.png" height=400 width=700/>
+
+
+[https://dev.twitter.com/docs/api/1/get/blocks/blocking](https://dev.twitter.com/docs/api/1/get/blocks/blocking)
+
+---
+
+## Creando una aplicación 
+
+<img class=center src="/home/kevin/GettingData/assets/img/twitterapp1.png" height=400 width=700/>
+
+[https://dev.twitter.com/apps](https://dev.twitter.com/appsmyapp <- oauth_app("twitter", key = "TYrWFPkFAkn4G5BbkWINYw"))
+
+---
+
+## Creando una aplicación 
+
+<img class=center src="/home/kevin/GettingData/assets/img/twitterapp2.png" height=400 width=700/>
+
+---
+
+## Creando una aplicación 
+
+<img class=center src="/home/kevin/GettingData/assets/img/twitterapp3.png" height=400 width=700/>
+
+---
+
+## Accediendo Twitter desde R
+
+```{r, echo=FALSE}
+consumerKey<-"hPPvJqM93Cd4orRU8nWAFSms7"
+consumerSecret<-"8rHDJKt8MUZ5t9XI0U85aqAoufBI7ZzTtjp8TI1bfZSaL3s1y2"
+accestoken<-"295341155-CXBCjKvVu5KG5SJ4w2QMhJ1tPu7NeFjSjFIMb6Hu"
+accestokensecret<-"tpi5IKUouENVN7bfQoy8MsnvDgy3MO19i42Cbp8ssLQqp"
+
+```
+
+
+```{r,eval=FALSE}
+require(twitteR)
+setup_twitter_oauth(consumer_key = consumerKey, consumer_secret = consumerSecret,
+                    access_token = accestoken,access_secret = accestokensecret)
+
+```
+
+---
+
+## Accediendo Twitter desde R
+
+```{r , echo=FALSE}
+require(twitteR)
+usuarios = c("Unicordoba_Col", "unimedios", "UdeA", "UdelAtlantico", "universidaduptc", "uni_cartagena", "udecaldas", "UniPopularCesar", "unimagdalena", "UniLaGuajira", 
+             "UnivalleCol", "unicauca", "PrensaUTCH", "USCOoficial", "Udenar","UFPSCUCUTA",
+             "Unipamplona", "Uniquindio", "UTPereira", "UISenlinea", "Unisucre", "unillanos_") 
+
+
+```
+
+```{r}
+u = sapply(usuarios, getUser)
+Universidad = sapply(u,name)
+Seguidores = sapply(u,followersCount)
+Siguiendo = sapply(u,friendsCount)
+Actualizaciones = sapply(u,statusesCount)
+Tweets = sapply(u,tweetCount)
+datos = data.frame(Universidad, Siguiendo, Seguidores, Actualizaciones, Tweets)
+```
+
+--- 
+
+## Accediendo Twitter desde R
+
+```{r , echo=FALSE}
+require(twitteR)
+usuarios = c("Unicordoba_Col", "unimedios", "UdeA", "UdelAtlantico", "universidaduptc", "uni_cartagena", "udecaldas", "UniPopularCesar", "unimagdalena", "UniLaGuajira", 
+             "UnivalleCol", "unicauca", "PrensaUTCH", "USCOoficial", "Udenar","UFPSCUCUTA",
+             "Unipamplona", "Uniquindio", "UTPereira", "UISenlinea", "Unisucre", "unillanos_") 
+
+
+```
+
+```{r, echo=FALSE, fig.align='center', fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
+require(ggplot2)
+u = sapply(usuarios, getUser)
+Universidad = sapply(u,name)
+Seguidores = sapply(u,followersCount)
+Siguiendo = sapply(u,friendsCount)
+Actualizaciones = sapply(u,statusesCount)
+Tweets = sapply(u,tweetCount)
+datos = data.frame(Universidad, Siguiendo, Seguidores, Actualizaciones, Tweets)
+p <- ggplot(data = datos, aes(Universidad, Tweets, fill = Seguidores))
+p +  geom_bar(stat = "identity") + coord_flip() + coord_polar()
+```
+
+---
+
+## Accediendo Twitter desde R
+
+```{r, message=FALSE, warning=FALSE}
+library(twitteR)
+tweets <- userTimeline("Unicordoba_Col", n = 10)
+head(tweets, 4)
+```
+
+---
+
+## Accediendo Twitter desde R (WordCloud)
+```{r, message=FALSE, warning=FALSE, results='hide', fig.show='hide'}
+library(twitteR)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+
+mach_tweets <- searchTwitter("machine learning", n=500, lang="en")
+mach_text <- sapply(mach_tweets, function(x) x$getText())
+mach_corpus <- Corpus(VectorSource(mach_text))
+tdm <- TermDocumentMatrix(mach_corpus, control = list(removePunctuation = TRUE,
+      stopwords = c("machine", "learning", stopwords("english")),
+                     removeNumbers = TRUE, tolower = TRUE))
+
+m = as.matrix(tdm)
+word_freqs = sort(rowSums(m), decreasing=TRUE) 
+dm = data.frame(word=names(word_freqs), freq=word_freqs)
+wordcloud(dm$word, dm$freq, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
+```
+
+---
+
+## Accediendo Twitter desde R (WordCloud)
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=6, fig.width=9}
+library(twitteR)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+
+mach_tweets <- searchTwitter("machine learning", n=500, lang="en")
+mach_text <- sapply(mach_tweets, function(x) x$getText())
+mach_corpus <- Corpus(VectorSource(mach_text))
+tdm <- TermDocumentMatrix(mach_corpus, control = list(removePunctuation = TRUE,
+      stopwords = c("machine", "learning", stopwords("english")),
+                     removeNumbers = TRUE, tolower = TRUE))
+
+m = as.matrix(tdm)
+word_freqs = sort(rowSums(m), decreasing=TRUE) 
+dm = data.frame(word=names(word_freqs), freq=word_freqs)
+wordcloud(dm$word, dm$freq, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
+```
+
+---
+
+## Un vistazo general a la documentación
+
+* Te puede autenticar con un nombre de usuario o una contraseña
+* Las APIs más modernas usan algo como oauth
+* Funciona de forma similar para Facebook, Google, Twitter, Githb, etc. 
+
+--- 
+
+## MySQL
+
+* El software libre más usado en el diseño de bases de datos
+* Ampliamente utilizado en aplicaciones basadas en Internet
+* Los datos se estructuran en
+  * Bases de datos
+  * Tablas dentro de las bases de datos
+  * Campos dentro de las tablas 
+* Cada fila es llamada un registro
+
+[http://es.wikipedia.org/wiki/MySQL](http://es.wikipedia.org/wiki/MySQL)
+
+[http://www.mysql.com/](http://www.mysql.com/)
+
+---
+
+## Ejemplo de la estructura 
+
+<img class=center src="/home/kevin/GettingData/assets/img/database-schema.png" height=400 width=600/>
+
+
+[http://dev.mysql.com/doc/employee/en/sakila-structure.html](http://dev.mysql.com/doc/employee/en/sakila-structure.html)
+
+---
+
+## Primer paso - Instalar MySQL
+
+<img class=center src="/home/kevin/GettingData/assets/img/installmysql.png" height=400 width=600/>
+
+[http://dev.mysql.com/doc/refman/5.7/en/installing.html](http://dev.mysql.com/doc/refman/5.7/en/installing.html)
+
+---
+
+## Segundo paso - Instalar RMySQL
+
+* En  Mac y Linux: ```install.packages("RMySQL")```
+* En Windows: 
+  * Instrucciones - [http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL](http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL) 
+  * Guía potencialmente útil - [http://www.ahschulz.de/2013/07/23/installing-rmysql-under-windows/](http://www.ahschulz.de/2013/07/23/installing-rmysql-under-windows/)  
+
+---
+
+## Ejemplo - Base de datos UCSC
+
+
+<img class=center src="/home/kevin/GettingData/assets/img/ucsc.png" height=400 width=600/>
+
+[http://genome.ucsc.edu/](http://genome.ucsc.edu/)
+
+---
+
+## UCSC MySQL
+
+<img class=center src="/home/kevin/GettingData/assets/img/ucscmysql.png" height=400 width=600/>
+
+[http://genome.ucsc.edu/goldenPath/help/mysql.html](http://genome.ucsc.edu/goldenPath/help/mysql.html)
+
+---
+
+## Conectando y listando las bases de datos
+
+```{r databases, warning=FALSE, message=FALSE}
+library(RMySQL)
+ucscDb <- dbConnect(MySQL(),user="genome", 
+                    host="genome-mysql.cse.ucsc.edu")
+result <- dbGetQuery(ucscDb,"show databases;"); dbDisconnect(ucscDb);
+head(result, 4)
+```
+
+---
+
+## Realizando la conexión con hg19 y listando sus tablas
+
+```{r tables, cache=TRUE}
+hg19 <- dbConnect(MySQL(),user="genome", db="hg19",
+                    host="genome-mysql.cse.ucsc.edu")
+allTables <- dbListTables(hg19)
+length(allTables)
+allTables[1:5]
+```
+
+---
+
+## Obtener las dimensiones de una tabla específica
+
+```{r dimensions}
+hg19 <- dbConnect(MySQL(),user="genome", db="hg19",
+                    host="genome-mysql.cse.ucsc.edu")
+dbListFields(hg19,"affyU133Plus2")
+dbGetQuery(hg19, "select count(*) from affyU133Plus2")
+dbDisconnect(hg19)
+```
+
+---
+
+## Seleccionar un subconjunto especifico
+
+```{r , echo=FALSE}
+hg19 <- dbConnect(MySQL(),user="genome", db="hg19",
+                    host="genome-mysql.cse.ucsc.edu")
+```
+
+
+```{r}
+hg19 <- dbConnect(MySQL(),user="genome", db="hg19",
+                    host="genome-mysql.cse.ucsc.edu")
+query <- dbSendQuery(hg19, "select * from affyU133Plus2 where misMatches between 1 and 3")
+affyMis <- fetch(query); quantile(affyMis$misMatches)
+affyMisSmall <- fetch(query,n=10); dbClearResult(query);
+dim(affyMisSmall)
+```
+
+---
+
+## Nunca olvides cerrar la conexión!
+
+```{r, dependson="tables"}
+dbDisconnect(hg19)
+```
+
+---
+
+## Otros recursos
+
+* RMySQL vignette [http://cran.r-project.org/web/packages/RMySQL/RMySQL.pdf](http://cran.r-project.org/web/packages/RMySQL/RMySQL.pdf)
+* Lista de comandos [http://www.pantz.org/software/mysql/mysqlcommands.html](http://www.pantz.org/software/mysql/mysqlcommands.html)
+* __Nunca , nunca, pero nunca hagas delete, add o join en esta base de datos. Solo select.__
+* En general hay que ser muy cuidadoso con los comandos en MySql 
+* Una buena entrada de un blog que resume algunos otros comandos [http://www.r-bloggers.com/mysql-and-r/](http://www.r-bloggers.com/mysql-and-r/)
+
+--- 
+
+## Hay un paquete para eso
+
+* Aquí voy a revisar brevemente algunos paquetes útiles
+* En general, la mejor manera de saber si existe el paquete R es en Google
+* Por ejemplo: "MySQL R package"
+
+---
+
+## Interactuar de manera más directa con los archivos
+
+* file - abrir una conexión a un archivo de texto
+* url - abrir una conexión a una url
+* gzfile - abrir una conexión a un archivo .gz file
+* bzfile - abrir una conexión a un archivo .bz2 file
+* _?connections_ Para mas información
+* <span style="color:red">Recuerda cerrar las conexiones</span>
+
+---
+
+## Paquetes externos
+
+* Cargan datos desde Minitab, S, SAS, SPSS, Stata,Systat
+* Funciones básicas _read.foo_
+    - read.arff (Weka)
+    - read.dta (Stata)
+    - read.mtp (Minitab)
+    - read.octave (Octave)
+    - read.spss (SPSS)
+    - read.xport (SAS)
+    - Para mas detalles vea la página de ayuda [http://cran.r-project.org/web/packages/foreign/foreign.pdf](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
+
+---
+
+## Ejemplos de otros paquetes de base de datos
+
+* RPostresSQL provee una conexión a la base de datos desde R. Tutorial-[https://code.google.com/p/rpostgresql/](https://code.google.com/p/rpostgresql/), help file-[http://cran.r-project.org/web/packages/RPostgreSQL/RPostgreSQL.pdf](http://cran.r-project.org/web/packages/RPostgreSQL/RPostgreSQL.pdf)
+* RODBC proporciona interfaces a varias bases de datos que incluyen a PostgreQL, MySQL, Microsoft Access and SQLite. Tutorial - [http://cran.r-project.org/web/packages/RODBC/vignettes/RODBC.pdf](http://cran.r-project.org/web/packages/RODBC/vignettes/RODBC.pdf), help file - [http://cran.r-project.org/web/packages/RODBC/RODBC.pdf](http://cran.r-project.org/web/packages/RODBC/RODBC.pdf)
+* RMongo [http://cran.r-project.org/web/packages/RMongo/RMongo.pdf](http://cran.r-project.org/web/packages/RMongo/RMongo.pdf) (ejemplo de R Mongo [http://www.r-bloggers.com/r-and-mongodb/](http://www.r-bloggers.com/r-and-mongodb/)) and [rmongodb](http://cran.r-project.org/web/packages/rmongodb/rmongodb.pdf) provee interfaces a MongoDb. 
+
+---
+
+## Leyendo imagenes 
+
+* jpeg - [http://cran.r-project.org/web/packages/jpeg/index.html](http://cran.r-project.org/web/packages/jpeg/index.html)
+* readbitmap - [http://cran.r-project.org/web/packages/readbitmap/index.html](http://cran.r-project.org/web/packages/readbitmap/index.html)
+* png - [http://cran.r-project.org/web/packages/png/index.html](http://cran.r-project.org/web/packages/png/index.html)
+* EBImage(Bioconductor)-[http://www.bioconductor.org/packages/2.13/bioc/html/EBImage.html](http://www.bioconductor.org/packages/2.13/bioc/html/EBImage.html)
+
+---
+
+## Leyendo datos GIS
+
+* rgdal - [http://cran.r-project.org/web/packages/rgdal/index.html](http://cran.r-project.org/web/packages/rgdal/index.html)
+* rgeos - [http://cran.r-project.org/web/packages/rgeos/index.html](http://cran.r-project.org/web/packages/rgeos/index.html)
+* raster - [http://cran.r-project.org/web/packages/raster/index.html](http://cran.r-project.org/web/packages/raster/index.html)
+
+---
+
+## Leyendo datos de música
+
+* tuneR - [http://cran.r-project.org/web/packages/tuneR/](http://cran.r-project.org/web/packages/tuneR/)
+* seewave - [http://rug.mnhn.fr/seewave/](http://rug.mnhn.fr/seewave/)
+
+---
+
+## Indexado - breve repaso
+
+```{r subsetting}
+set.seed(13435)
+X <- data.frame("var1"=sample(1:5),"var2"=sample(6:10),"var3"=sample(11:15))
+X <- X[sample(1:5),]; X$var2[c(1,3)] = NA
+X
+```
+
+
+---
+
+## Indexado - breve repaso
+
+```{r ,dependson="subsetting"}
+X[,1]
+X[,"var1"]
+X[1:2,"var2"]
+```
+
+
+---
+
+## Logicos 
+
+```{r ,dependson="subsetting"}
+X[(X$var1 <= 3 & X$var3 > 11),]
+X[(X$var1 <= 3 | X$var3 > 15),]
+```
+
+---
+
+## Tratando con datos faltantes
+
+```{r ,dependson="subsetting"}
+X[which(X$var2 > 8),]
+```
+
+---
+
+## Ordenado
+
+```{r ,dependson="subsetting"}
+sort(X$var1)
+sort(X$var1,decreasing=TRUE)
+sort(X$var2,na.last=TRUE)
+```
+
+
+---
+
+## Ordenando
+
+```{r ,dependson="subsetting"}
+X[order(X$var1),]
+```
+
+---
+
+## Ordenando
+
+```{r ,dependson="subsetting"}
+X[order(X$var1,X$var3),]
+```
+
+---
+
+## Ordenando con plyr
+
+```{r ,dependson="subsetting", message=FALSE, warning=FALSE}
+library(plyr)
+arrange(X,var1)
+arrange(X,desc(var1))
+```
+
+
+---
+
+## Agregando filas y columnas
+
+```{r,dependson="subsetting"}
+X$var4 <- rnorm(5)
+X
+```
+
+
+---
+
+## Agregando filas y columnas
+
+```{r,dependson="subsetting"}
+Y <- cbind(X,rnorm(5))
+Y
+```
+
+
+---
+
+## Obteniendo datos de la web
+
+```{r getData}
+if(!file.exists("./data")){dir.create("./data")}
+fileUrl <- "http://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD"
+download.file(fileUrl,destfile="./data/restaurants.csv")
+restData <- read.csv("./data/restaurants.csv")
+```
+
+
+---
+
+## Una mirada a los datos
+
+```{r ,dependson="getData"}
+head(restData,n=3)
+tail(restData,n=3)
+```
+
+
+---
+
+## Haciendo un summary
+
+```{r ,dependson="getData"}
+summary(restData)
+```
+
+---
+
+## Información más detallada 
+
+```{r ,dependson="getData"}
+str(restData)
+```
+
+
+---
+
+## Quantiles de las variables cuantitativas 
+
+```{r ,dependson="getData"}
+quantile(restData$councilDistrict,na.rm=TRUE)
+quantile(restData$councilDistrict,probs=c(0.5,0.75,0.9))
+```
+
+---
+
+## Realizando tablas
+
+```{r ,dependson="getData"}
+table(restData$zipCode,useNA="ifany")
+```
+
+---
+
+## Realizando tablas
+
+```{r ,dependson="getData"}
+table(restData$councilDistrict,restData$zipCode)
+```
+
+---
+
+## Revisando por datos faltantes
+
+```{r ,dependson="getData"}
+sum(is.na(restData$councilDistrict))
+any(is.na(restData$councilDistrict))
+all(restData$zipCode > 0)
+```
+
+
+---
+
+## Suma de filas y columnas
+
+```{r,dependson="getData"}
+colSums(is.na(restData))
+all(colSums(is.na(restData))==0)
+```
+
+
+---
+
+## Valores con caractrísticas especificas 
+
+```{r,dependson="getData"}
+table(restData$zipCode %in% c("21212"))
+table(restData$zipCode %in% c("21212","21213"))
+
+```
+
+
+---
+
+## Valores con caractrísticas especificas 
+
+
+```{r,dependson="getData"}
+restData[restData$zipCode %in% c("21212","21213"),]
+```
+
+
+---
+
+## Tablas cruzadas
+
+```{r adm}
+data(UCBAdmissions)
+DF = as.data.frame(UCBAdmissions)
+summary(DF)
+```
+
+
+---
+
+## Tablas cruzadas
+
+```{r ,dependson="adm"}
+xt <- xtabs(Freq ~ Gender + Admit,data=DF)
+xt
+```
+
+
+---
+
+## Flat tables
+
+```{r wb}
+warpbreaks$replicate <- rep(1:9, len = 54)
+xt = xtabs(breaks ~.,data=warpbreaks)
+xt
+
+```
+
+
+---
+
+## Flat tables
+
+```{r ,dependson="wb"}
+ftable(xt)
+```
+
+
+---
+
+## Tamaño de un conjunto de datos
+
+```{r}
+fakeData = rnorm(1e5)
+object.size(fakeData)
+print(object.size(fakeData),units="Mb")
+```
+
+---
+
+## ¿Por qué crear nuevas variables?
+
+* A menudo, los datos brutos no tendrán un valor que buscamos
+* Tendremos que transformar los datos para obtener los valores que nos gustaría
+* Por lo general, vas a agregar esos valores a los data frame con los que se está trabajando
+* Variables comunes a crear
+  * Indiadores de perdidos 
+  * "Cortar por" variables cuantitativas
+  * La aplicación de las transformaciones
+
+
+---
+
+## Crendo secuencias 
+
+_A veces se necesita un índice para el conjunto de datos_
+
+```{r}
+s1 <- seq(1,10,by=2) ; s1
+s2 <- seq(1,10,length=3); s2
+x <- c(1,3,8,25,100); seq(along = x)
+```
+
+
+---
+
+## Subconjuntos de variables
+
+```{r,dependson="getData"}
+restData$nearMe = restData$neighborhood %in% c("Roland Park", "Homeland")
+table(restData$nearMe)
+```
+
+---
+
+## Creando variables binarias
+
+```{r,dependson="getData"}
+restData$zipWrong = ifelse(restData$zipCode < 0, TRUE, FALSE)
+table(restData$zipWrong,restData$zipCode < 0)
+```
+
+
+---
+
+## Creando variables categoricas
+
+```{r,dependson="getData"}
+restData$zipGroups = cut(restData$zipCode,breaks=quantile(restData$zipCode))
+table(restData$zipGroups)
+table(restData$zipGroups,restData$zipCode)
+```
+
+
+---
+
+## Recorte más fácil 
+
+```{r,dependson="getData"}
+library(Hmisc)
+restData$zipGroups = cut2(restData$zipCode,g=4)
+table(restData$zipGroups)
+```
+
+---
+
+## Creando variables tipo factor 
+
+```{r}
+restData$zcf <- factor(restData$zipCode)
+restData$zcf[1:10]
+class(restData$zcf)
+```
+
+
+---
+
+## Varibles en nivesles del factor 
+
+```{r}
+yesno <- sample(c("yes","no"),size=10,replace=TRUE)
+yesnofac = factor(yesno,levels=c("yes","no"))
+relevel(yesnofac,ref="no")
+as.numeric(yesnofac)
+```
+
+---
+
+## Recorte produce variables tipo factor 
+
+
+```{r,dependson="getData"}
+library(Hmisc)
+restData$zipGroups = cut2(restData$zipCode,g=4)
+table(restData$zipGroups)
+```
+
+
+---
+
+## Uso de la función mutate 
+
+```{r,dependson="getData"}
+library(Hmisc); library(plyr)
+restData2 = mutate(restData,zipGroups=cut2(zipCode,g=4))
+table(restData2$zipGroups)
+```
+
+
+---
+
+## Transformaiones comunes 
+
+* `abs(x)` Valor absoluto
+* `sqrt(x)` Raiz Cuadrada
+* `ceiling(x)` ceiling(3.475) es 4
+* `floor(x)` floor(3.475) es 3
+* `round(x,digits=n)` round(3.475,digits=2) es 3.48
+* `signif(x,digits=n)` signif(3.475,digits=2) es 3.5
+* `cos(x), sin(x)` etc.
+* `log(x)` logaritmo natural 
+* `log2(x)`, `log10(x)` otros logaritmos comunes 
+* `exp(x)` exponenciación de x
+
+[http://www.biostat.jhsph.edu/~ajaffe/lec_winterR/Lecture%202.pdf](http://www.biostat.jhsph.edu/~ajaffe/lec_winterR/Lecture%202.pdf)
+[http://statmethods.net/management/functions.html](http://statmethods.net/management/functions.html)
+
+
+---
+
+
+## Comenzando con reshaping
+
+```{r reshape2}
+library(reshape2)
+head(mtcars)
+```
+
+
+---
+
+## Melting (fusionando) data frames
+
+```{r mtcars,dependson="reshape2"}
+mtcars$carname <- rownames(mtcars)
+carMelt <- melt(mtcars,id=c("carname","gear","cyl"),measure.vars=c("mpg","hp"))
+head(carMelt,n=3)
+tail(carMelt,n=3)
+```
+
+
+[http://www.statmethods.net/management/reshape.html](http://www.statmethods.net/management/reshape.html)
+
+---
+
+## Casting data frames
+
+```{r ,dependson="mtcars", message=FALSE, warning=FALSE}
+cylData <- dcast(carMelt, cyl ~ variable)
+cylData
+cylData <- dcast(carMelt, cyl ~ variable,mean)
+cylData
+```
+
+[http://www.statmethods.net/management/reshape.html](http://www.statmethods.net/management/reshape.html)
+
+
+---
+
+## Promediando valores
+
+```{r}
+head(InsectSprays)
+tapply(InsectSprays$count,InsectSprays$spray,sum)
+```
+
+
+---
+
+## Otra forma - split
+
+```{r spIns}
+spIns =  split(InsectSprays$count,InsectSprays$spray)
+spIns
+```
+
+---
+
+## Otra forma - apply
+
+```{r sprCount,dependson="spIns"}
+sprCount = lapply(spIns,sum)
+sprCount
+```
+
+---
+
+## Otra forma - combine
+
+```{r ,dependson="sprCount"}
+unlist(sprCount)
+sapply(spIns,sum)
+```
+
+---
+
+
+## Datos de revisión por pares
+
+
+```{r reviewDownload, cache=TRUE}
+reviews = read.csv("./data/reviews.csv"); solutions <- read.csv("./data/solutions.csv")
+head(reviews,2)
+head(solutions,2)
+```
+
+
+---
+
+## Fusionado de datos - merge()
+
+* Fusiona data frames
+* Parámetros importantes: _x_,_y_,_by_,_by.x_,_by.y_,_all_
+```{r, dependson="reviewDownload"}
+names(reviews)
+names(solutions)
+```
+
+---
+
+## Fusionado de datos - merge()
+
+```{r, dependson="reviewDownload"}
+mergedData = merge(reviews,solutions,by.x="solution_id",by.y="id",all=TRUE)
+head(mergedData)
+```
+
+---
+
+## Por defecto - fusionando todas los nombres de columnas comunes 
+
+```{r, dependson="reviewDownload"}
+intersect(names(solutions),names(reviews))
+mergedData2 = merge(reviews,solutions,all=TRUE)
+head(mergedData2)
+```
+
+---
+
+## Utilizando join en el paquete plyr  
+
+```{r }
+df1 = data.frame(id=sample(1:10),x=rnorm(10))
+df2 = data.frame(id=sample(1:10),y=rnorm(10))
+arrange(join(df1,df2),id)
+```
+
+
+---
+
+## Si se tiene multiples data frames
+
+```{r}
+df1 = data.frame(id=sample(1:10),x=rnorm(10))
+df2 = data.frame(id=sample(1:10),y=rnorm(10))
+df3 = data.frame(id=sample(1:10),z=rnorm(10))
+dfList = list(df1,df2,df3)
+join_all(dfList)
+```
+
+---
+
+## Qué es el control de versiones?
+
+<q>El control de versiones es un sistema que registra los cambios en un archivo o conjunto de archivos que se dan con el tiempo para que más tarde puedas recuperar versiones específicas.</q>
+
+[http://git-scm.com/book/en/Getting-Started-About-Version-Control](http://git-scm.com/book/en/Getting-Started-About-Version-Control)
+
+---
+
+## Qué es el control de versiones?
+
+* Muchos de nosotros constantemente creamos algo, lo guardamos, lo cambiamos y luego lo guardamos de nuevo
+* Control versión (o revisión)  es un medio de la gestión de este proceso de una manera confiable y eficiente
+* Especialmente cuando colaboramos con otros 
+
+[http://en.wikipedia.org/wiki/Revision_control](http://en.wikipedia.org/wiki/Revision_control)
+
+---
+
+## Que es Git?
+
+<q>Git es un sistema gratuito y de código abierto distribuido de control de versiones diseñado para manejar todo, desde pequeñas a muy grandes proyectos la velocidad y la eficiencia necesarias.</q>
+
+[http://git-scm.com/](http://git-scm.com/)
+
+---
+
+## Que es Git?
+
+* Creado por la misma persona que desarrollo Linux
+* Es la más importante implementación del control de versiones hoy 
+* Todo es guardado en tu computador local 
+* Es operado desd la linea de comandos 
+
+[http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git](http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git)
+
+---
+
+## Que es GitHub?
+
+<q>GitHub es un servicio de alojamiento basado en la web para proyectos de desarrollo de software que utilizan el sistema de control de versiones Git.</q>
+
+[http://en.wikipedia.org/wiki/GitHub](http://en.wikipedia.org/wiki/GitHub)
+
+---
+
+## Que es GitHub?
+
+* Permite a los usarios "push" and "pull" sus repositorios locales desde y hacia los repositorios web
+* Proporciona a los usuarios una página de inicio que muestra sus repositorios públicos
+* Repositorios de los usuarios están respaldados en el servidor de GitHub en caso de que algo le suceda a las copias locales
+* Aspecto social permite que los usuarios se sigan y compartan proyectos
+
+---
+
+## Configurar una cuenta de GitHub
+
+* Vayan a la página de inicio de GitHub [https://github.com/](https://github.com/)
+* Entren un nombre de usuario, email, y contraseña y hagan clic en "Sign up for GitHub"
+
+---
+
+
+## Su perfil en GitHub 
+
+* Su perfil es donde se muestra la totalidad de su actividad en GitHub
+* Le permite mostrar a otras personas lo que eres y lo que está trabajando
+* Mientras trabaja en más y más proyectos, su perfil se convierte en un portafolio de su trabajo
+* Por último, si hace clic en "Editar su perfil" en la parte superior derecha de la pantalla se puede añadir un poco de información básica acerca de ti a tu perfil
+* Esto es totalmente opcional, pero si haces un buen trabajo, debes tomar algo de crédito por ello!
+
+---
+
+## Recapitulando: Git vs. GitHub
+
+* No necesitas GitHub para usar Git
+* Git = Local (en tu computador); GitHub = Remoto (en la web)
+* GitHub te permite:
+  1. Compartir tus repositorios con otros 
+  2. Acceso a reposotorios de otros usuarios 
+  3. Guardar copias remotas de los repositorios (en el servidor de GitHub) en caso de que algo le suceda a sus copias locales (en el equipo)
+
+
+---
+
+
+
+## Creando un reposotorio de GitHub 
+
+* Existen dos metodos para crear un repositorio en GitHub:
+  1. Comience un repositorio desde cero
+  2. "Fork" el repositorio de otro usuario

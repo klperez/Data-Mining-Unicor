@@ -1,0 +1,5003 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introducción a la minería de datos</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introducción a la minería de datos">
+  <meta name="author" content="Kevin Pérez - Ing de Sistemas - Estadístico">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/unicordoba3.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Introducción a la minería de datos</h1>
+    <h2>Una breve introdución</h2>
+    <p>Kevin Pérez - Ing de Sistemas - Estadístico<br/>Departamento de Matemáticas y Estadística - Universidad de Córdoba</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Una breve introducción 
+
+<ul>
+<li>Por que minería de datos?</li>
+<li>Que es minería de datos?</li>
+<li>Minería de datos: Un proceso de descubrimiento del conocimiento (kdd)</li>
+<li>Minería de datos: Una visión multidimensional
+
+<ul>
+<li>Minería de datos desde el punto de vista de los datos</li>
+<li>Minería de datos desde el punto de vista del conocimiento</li>
+<li>Minería de datos desde el punto de vista metodológico</li>
+<li>Minería de datos desde el punto de vista de la aplicación.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Obtención y Manipulación de datos 
+
+<ul>
+<li>Datos en bruto y procesado</li>
+<li>Componentes de los datos ordenados.</li>
+<li>Obtención de datos locales.</li>
+<li>Lectura desde bases de datos.</li>
+<li>Leyendo datos de la web y redes sociales. </li>
+<li>Indexación, ordenado y resumen de datos.</li>
+<li>Reorganización y fusionado de datos</li>
+<li>Trabajando con fechas, edición de textos y expresiones regulares. </li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Algoritmos de modelado de datos 
+
+<ul>
+<li>Descubrimiento de patrones en data mining. </li>
+<li>Concepto de clúster, técnicas de clúster en data mining y clúster en grandes dimensiones.</li>
+<li>Concepto de asociación y correlación en data mining, técnicas de asociación y correlación en data mining.</li>
+<li>Regresión conceptos en data mining, técnicas de regresión en data mining<br></li>
+<li>Algoritmos del machine learning en data mining (Redes neuronales, algoritmos genéticos y procesos de simulación).</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Validación y selección de modelos en data mining
+
+<ul>
+<li>Diseño de estudio de validación</li>
+<li>Validación cruzada, error de muestreo e importancia relativa<br></li>
+<li>Validación, selección e interpretación de patrones en data mining</li>
+<li>Data de entrenamiento </li>
+<li>Visualización de patrones en data mining. </li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Visualización de datos
+
+<ul>
+<li>Introducción a la visualización de datos</li>
+<li>Visualización de datos numéricos</li>
+<li>Visualización de datos no numéricos </li>
+<li>Tableros de visualización de datos.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Contenido</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Tex mining
+
+<ul>
+<li>Recolección de información de texto e ingeniería de búsquedas.</li>
+<li>Procesado natural del lenguaje (NPL).</li>
+<li>Asociación de palabras, análisis de tópicos en textos y análisis de sentimientos.</li>
+<li>Modelos de predicción en tex mining.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Por que minería de datos?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Crecimiento explosivo de los datos 
+
+<ul>
+<li>Explosión de los datos: Nuestra capacidad de generar , recopilar, almacenar, y gestionar datos ha crecido enormemente en los últimos 50 años</li>
+<li>Las principales fuentes de datos 
+
+<ul>
+<li>Web y la sociedad de información : Noticias, medios digitales , redes sociales , el comercio electrónico, transacciones , acciones, ...</li>
+<li>Ciencia e ingeniería : La teledetección , bioinformática , simulación científica, ...</li>
+</ul></li>
+<li>Nos estamos ahogando en datos, pero hambrientos de conocimiento!</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Que es la minería de datos?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Minería de datos: descubrieminto del conocimiento a partir de los datos (kdd)</p>
+
+<ul>
+<li>Extración de interesantes (no triviales, implícitos, previamente desconocidos y potencialmente útil) 
+patrones o conocimientos de datos masivos </li>
+<li>La minería de datos: Un nombre inapropiado?
+
+<ul>
+<li>La minería del conocimiento a partir de datos!</li>
+</ul></li>
+<li>La minería de datos: Su relación con otras disciplinas
+
+<ul>
+<li>Aprendizaje automático, reconocimiento de patrones, estadística, bases de datos,
+inteligencia de negocios, Big Data, ...</li>
+</ul></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Minería de datos: Un proceso de descubrimiento del conocimiento (kdd)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/Documentos/Clases Unicor/Data Mining/Notas/assets/img/datamining12.png" height=450 width=900></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Minería de datos: Una visión multidimensional</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>La minería de datos se puede ver desde varios ángulos
+
+<ul>
+<li>Los datos que se extraen</li>
+<li>El conocimiento que se extrae</li>
+<li>Metodologías o técnicas utilizadas</li>
+<li>Aplicaciones adaptadas</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Punto de vista de los datos: ¿Qué tipo de datos?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Datos estructurados y semi-estructurados </p>
+
+<ul>
+<li>Datos relacionales/datos de objeto-relacionales</li>
+<li>Datos de bodegas de datos</li>
+<li>Datos transaccionales </li>
+</ul></li>
+<li><p>Datos estructurados</p>
+
+<ul>
+<li>Datos de texto y datos de la web</li>
+<li>Datos espaciales y espaciotemporales</li>
+<li>Datos de multimedia </li>
+<li>Datos de flujos y sensores </li>
+<li>Datos de series de tiempo y datos secuenciales </li>
+<li>Grafos, redes sociales y redes de información</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Punto de vista del conocimiento: Conocimiento a extraer</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Resumen de datos en espacios multidimiencionales 
+
+<ul>
+<li>Cubos de datos y OLAP (On-Line Analytical Processing)</li>
+</ul></li>
+<li>Descubrimiento de patrones 
+
+<ul>
+<li>Minería de patrones frecuentes, asociación y correlación</li>
+</ul></li>
+<li>Modelos de clasificación y modelos predictivos
+
+<ul>
+<li>Construcción de modelos sobre la base de algunos ejemplos </li>
+<li>Predicción de nuevos datos basados en modelos construidos</li>
+</ul></li>
+<li>Análisis de cluster: Cómo agrupar datos para formar nuevas categorías?</li>
+<li>Análisis de outlier: El descubrimiento de anomalías y eventos raros</li>
+<li>Tendencias y análisis de evolución</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Punto de vista metdológico: Confluencia de multiples disciplinas</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/Documentos/Clases Unicor/Data Mining/Notas/assets/img/9.png" height=400 width=900></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Puntos de vista aplicativo: Diversidad de aplicaciones</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Minería de texto y minería en la web</p>
+
+<ul>
+<li>Clasificación de paginas web, análisis de Weblog, sistemas de recomendación
+, etc</li>
+</ul></li>
+<li><p>Minería en datos de negocios </p>
+
+<ul>
+<li>Datos transaccionales, market basket analysis, detección de fraude, etc</li>
+</ul></li>
+<li><p>La minería de datos e ingeniería de software, ej: minando bugs en software</p></li>
+<li><p>Extrayendo datos biologicos y medicos</p>
+
+<ul>
+<li>Genes, proteinas, redes biologicas</li>
+</ul></li>
+<li><p>Minando información de redes sociales </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Get/set tu directorio de trabajo</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Un componente básico de trabajar con datos es conocer su directorio de trabajo</li>
+<li>Los dos comandos principales son <code>getwd()</code> y <code>setwd()</code>. </li>
+<li>Tenga en cuenta las rutas relatvias vs las absolutas
+
+<ul>
+<li><strong>Relativa</strong> - <code>setwd(&quot;./data&quot;)</code>, <code>setwd(&quot;../&quot;)</code></li>
+<li><strong>Absoluta</strong> - <code>setwd(&quot;/Users/name/data/&quot;)</code></li>
+</ul></li>
+<li>Diferencia importante en Windows <code>setwd(&quot;C:\\Users\\Name\\Downloads&quot;)</code></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Comprobación y creación de directorios</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><code>file.exists(&quot;NombreDirectorio&quot;)</code> comprueba si existe el directorio</li>
+<li><code>dir.create(&quot;NombreDirectorio&quot;)</code> creará un directorio si no existe</li>
+<li>Aquí un ejemplo de comprobación del directeorio &quot;data&quot; y su creación si no existe </li>
+</ul>
+
+<pre><code class="r">if(!file.exists(&quot;Data&quot;)){
+  dir.create(&quot;Data&quot;)
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Obteniendo datos de internet - download.file()</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Descarga un archivo de internet</li>
+<li>Incluso si se pudiera hacer esto a mano, ayuda con la reproducibilidad</li>
+<li>Los parámetros importantes son  <strong><em>url</em></strong>, <strong><em>destfile</em></strong>, <strong><em>method</em></strong></li>
+<li>Útil para la descarga de <strong><em>delimitados-tab</em></strong>, <strong><em>csv</em></strong>, y otros archivos</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Ejemplo - Baltimore camera data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/cameras.png" height=500 width=700></p>
+
+<p><a href="https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru">https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Ejemplo - Baltimore camera data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/cameraslink.png" height=500 width=700></p>
+
+<p><a href="https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru">https://data.baltimorecity.gov/Transportation/Baltimore-Fixed-Speed-Cameras/dz54-2aru</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Descargando un archivo de la web</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">fileUrl &lt;- &quot;http://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD&quot;
+download.file(fileUrl,destfile=&quot;/home/kevin/GettingData/Data/cameras.csv&quot;)
+list.files(&quot;/home/kevin/GettingData/Data&quot;)
+</code></pre>
+
+<pre><code>## [1] &quot;cameras.csv&quot;
+</code></pre>
+
+<pre><code class="r">#dateDownloaded &lt;- date()
+#dateDownloaded
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Algunas notas sobre download.file()</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Si la url comienza con <em>http</em> puedes usar download.file()</li>
+<li>Si la url comienza con <em>https</em> en Windows puedes estar tranquilo</li>
+<li>Si la url comienza con <em>https</em> en Mac puede que tengas que configurar <em>method=&quot;curl&quot;</em></li>
+<li>Si el archivo es muy grande, puede tomarte algún tiempo</li>
+<li>Asegúrese de registrar la descarga</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>XML</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Extensible markup language</li>
+<li>Frecuentemente utilizado para almacenar datos estructurados</li>
+<li>Particularmente utilizado ampliamente en aplicaciones de internet</li>
+<li>La extracción de XML es la base para la mayoría del web scraping</li>
+<li>Componentes
+
+<ul>
+<li>Markup - etiquetas que dan la estructura del texto</li>
+<li>Content - el texto real del documento</li>
+</ul></li>
+</ul>
+
+<p><a href="http://es.wikipedia.org/wiki/Extensible_Markup_Language">http://es.wikipedia.org/wiki/Extensible_Markup_Language</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Etiquetas, elementos y atributos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Tags corresponden a las etiquetas generales
+
+<ul>
+<li>Comienzo de tags <code>&lt;section&gt;</code></li>
+<li>Fin de tags <code>&lt;/section&gt;</code></li>
+<li>Tags vacias <code>&lt;line-break /&gt;</code></li>
+</ul></li>
+<li>Elements son ejemplos especificos de las tags
+
+<ul>
+<li><code>&lt;Greeting&gt; Hola, mundo &lt;/Greeting&gt;</code></li>
+</ul></li>
+<li>Attributes son componentes de la etiqueta
+
+<ul>
+<li><code>&lt;img src=&quot;kevin.jpg&quot; alt=&quot;instructor&quot;/&gt;</code></li>
+<li><code>&lt;step number=&quot;3&quot;&gt; Connect A to B. &lt;/step&gt;</code></li>
+</ul></li>
+</ul>
+
+<p><a href="http://es.wikipedia.org/wiki/Extensible_Markup_Language">http://es.wikipedia.org/wiki/Extensible_Markup_Language</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Ejemplo de un archivo XML</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/xmlexample.png" height=500 width=700></p>
+
+<p><a href="http://www.w3schools.com/xml/simple.xml">http://www.w3schools.com/xml/simple.xml</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Leer el archivo en R</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(XML)
+fileUrl &lt;- &quot;http://www.w3schools.com/xml/simple.xml&quot;
+doc &lt;- xmlTreeParse(fileUrl,useInternal=TRUE)
+rootNode &lt;- xmlRoot(doc)
+xmlName(rootNode)
+</code></pre>
+
+<pre><code>## [1] &quot;breakfast_menu&quot;
+</code></pre>
+
+<pre><code class="r">names(rootNode)
+</code></pre>
+
+<pre><code>##   food   food   food   food   food 
+## &quot;food&quot; &quot;food&quot; &quot;food&quot; &quot;food&quot; &quot;food&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Acceder directamente a partes del documento XML</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">rootNode[[1]]
+</code></pre>
+
+<pre><code>## &lt;food&gt;
+##   &lt;name&gt;Belgian Waffles&lt;/name&gt;
+##   &lt;price&gt;$5.95&lt;/price&gt;
+##   &lt;description&gt;Two of our famous Belgian Waffles with plenty of real maple syrup&lt;/description&gt;
+##   &lt;calories&gt;650&lt;/calories&gt;
+## &lt;/food&gt;
+</code></pre>
+
+<pre><code class="r">rootNode[[1]][[1]]
+</code></pre>
+
+<pre><code>## &lt;name&gt;Belgian Waffles&lt;/name&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Extraer programáticamente partes del archivo</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">xmlSApply(rootNode,xmlValue)
+</code></pre>
+
+<pre><code>##                                                                                                                     food 
+##                               &quot;Belgian Waffles$5.95Two of our famous Belgian Waffles with plenty of real maple syrup650&quot; 
+##                                                                                                                     food 
+##                    &quot;Strawberry Belgian Waffles$7.95Light Belgian waffles covered with strawberries and whipped cream900&quot; 
+##                                                                                                                     food 
+## &quot;Berry-Berry Belgian Waffles$8.95Light Belgian waffles covered with an assortment of fresh berries and whipped cream900&quot; 
+##                                                                                                                     food 
+##                                                &quot;French Toast$4.50Thick slices made from our homemade sourdough bread600&quot; 
+##                                                                                                                     food 
+##                         &quot;Homestyle Breakfast$6.95Two eggs, bacon or sausage, toast, and our ever-popular hash browns950&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>XPath</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><em>/node</em> Nodo de nivel superior</li>
+<li><em>//node</em> Nodo en cualquier nivel</li>
+<li><em>node[@attr-name]</em> Nodo con un nombre de atributo</li>
+<li><em>node[@attr-name=&#39;bob&#39;]</em> Nodo con nombre de atributo attr-name=&#39;bob&#39;</li>
+</ul>
+
+<p>Information from: <a href="http://www.stat.berkeley.edu/%7Estatcur/Workshop2/Presentations/XML.pdf">http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Obtener los elementos en el menú y sus precios</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">xpathSApply(rootNode,&quot;//name&quot;,xmlValue)
+</code></pre>
+
+<pre><code>## [1] &quot;Belgian Waffles&quot;             &quot;Strawberry Belgian Waffles&quot; 
+## [3] &quot;Berry-Berry Belgian Waffles&quot; &quot;French Toast&quot;               
+## [5] &quot;Homestyle Breakfast&quot;
+</code></pre>
+
+<pre><code class="r">xpathSApply(rootNode,&quot;//price&quot;,xmlValue)
+</code></pre>
+
+<pre><code>## [1] &quot;$5.95&quot; &quot;$7.95&quot; &quot;$8.95&quot; &quot;$4.50&quot; &quot;$6.95&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Otro ejemplo</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/ravens.png" height=500 width=700></p>
+
+<p><a href="http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013">http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Viendo el código fuente</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/ravenssource.png" height=500 width=700></p>
+
+<p><a href="http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013">http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Extrayendo el contenido por atributos</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">fileUrl &lt;- &quot;http://espn.go.com/nfl/team/schedule/_/name/bal/year/2013&quot;
+doc &lt;- htmlTreeParse(fileUrl,useInternal=TRUE)
+scores &lt;- xpathSApply(doc,&quot;//li[@class=&#39;score&#39;]&quot;,xmlValue)
+teams &lt;- xpathSApply(doc,&quot;//li[@class=&#39;team-name&#39;]&quot;,xmlValue)
+scores
+</code></pre>
+
+<pre><code>##  [1] &quot;49-27&quot;    &quot;14-6&quot;     &quot;30-9&quot;     &quot;23-20&quot;    &quot;26-23&quot;    &quot;19-17&quot;   
+##  [7] &quot;19-16&quot;    &quot;24-18&quot;    &quot;20-17 OT&quot; &quot;23-20 OT&quot; &quot;19-3&quot;     &quot;22-20&quot;   
+## [13] &quot;29-26&quot;    &quot;18-16&quot;    &quot;41-7&quot;     &quot;34-17&quot;    &quot;44-16&quot;    &quot;27-23&quot;   
+## [19] &quot;34-27&quot;    &quot;24-21&quot;
+</code></pre>
+
+<pre><code class="r">teams
+</code></pre>
+
+<pre><code>##  [1] &quot;Denver&quot;      &quot;Cleveland&quot;   &quot;Houston&quot;     &quot;Buffalo&quot;     &quot;Miami&quot;      
+##  [6] &quot;Green Bay&quot;   &quot;Pittsburgh&quot;  &quot;Cleveland&quot;   &quot;Cincinnati&quot;  &quot;Chicago&quot;    
+## [11] &quot;New York&quot;    &quot;Pittsburgh&quot;  &quot;Minnesota&quot;   &quot;Detroit&quot;     &quot;New England&quot;
+## [16] &quot;Cincinnati&quot;  &quot;Tampa Bay&quot;   &quot;Atlanta&quot;     &quot;Carolina&quot;    &quot;St. Louis&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Notas y más recursos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Tutoriales oficiales de XML  <a href="http://www.omegahat.org/RSXML/shortIntro.pdf">Resumido</a>, <a href="http://www.omegahat.org/RSXML/Tour.pdf">Completo</a></li>
+<li><a href="http://www.stat.berkeley.edu/%7Estatcur/Workshop2/Presentations/XML.pdf">Una excelente guía  para el paquete XML</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>JSON</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Javascript Object Notation</li>
+<li>Almacenamiento de datos Ligero</li>
+<li>Formato común para los datos de las interfaces de programación de aplicaciones (APIs)</li>
+<li>Similar en estructura a XML pero con diferente sintaxis/formato</li>
+<li>os datos son almacenados como
+
+<ul>
+<li>Numbers (double)</li>
+<li>Strings (double quoted)</li>
+<li>Boolean (<em>true</em> o <em>false</em>)</li>
+<li>Array (ordenado, separados por comas encerrados entre corchetes <em>[]</em>)</li>
+<li>Object (desordenados, separados por comas colección de clave: pares de valores entre llaves <em>{}</em>)</li>
+</ul></li>
+</ul>
+
+<p><a href="http://es.wikipedia.org/wiki/JSON">http://es.wikipedia.org/wiki/JSON</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Example JSON file</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/githubjson.png" height=600 width=900></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Leyendo datos de JSON {jsonlite package}</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(jsonlite)
+jsonData &lt;- fromJSON(&quot;https://api.github.com/users/jtleek/repos&quot;)
+head(jsonData$name, 22)
+</code></pre>
+
+<pre><code>##  [1] &quot;advdatasci&quot;              &quot;ballgown&quot;               
+##  [3] &quot;capitalIn21stCenturyinR&quot; &quot;careerplanning&quot;         
+##  [5] &quot;dataanalysis&quot;            &quot;datascientist&quot;          
+##  [7] &quot;datasharing&quot;             &quot;datawomenontwitter&quot;     
+##  [9] &quot;derfinder&quot;               &quot;derfinder-1&quot;            
+## [11] &quot;DSM&quot;                     &quot;EDA-Project&quot;            
+## [13] &quot;futureofstats&quot;           &quot;genomicspapers&quot;         
+## [15] &quot;googleCite&quot;              &quot;graduate&quot;               
+## [17] &quot;healthvis&quot;               &quot;hyde&quot;                   
+## [19] &quot;inclassfeb62014&quot;         &quot;jhsph753&quot;               
+## [21] &quot;jhsph753and4&quot;            &quot;jtleek.github.io&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Objetos anidados en JSON</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">names(jsonData$owner)
+</code></pre>
+
+<pre><code>##  [1] &quot;login&quot;               &quot;id&quot;                  &quot;avatar_url&quot;         
+##  [4] &quot;gravatar_id&quot;         &quot;url&quot;                 &quot;html_url&quot;           
+##  [7] &quot;followers_url&quot;       &quot;following_url&quot;       &quot;gists_url&quot;          
+## [10] &quot;starred_url&quot;         &quot;subscriptions_url&quot;   &quot;organizations_url&quot;  
+## [13] &quot;repos_url&quot;           &quot;events_url&quot;          &quot;received_events_url&quot;
+## [16] &quot;type&quot;                &quot;site_admin&quot;
+</code></pre>
+
+<pre><code class="r">jsonData$owner$login
+</code></pre>
+
+<pre><code>##  [1] &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot;
+##  [8] &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot;
+## [15] &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot;
+## [22] &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot; &quot;jtleek&quot;
+## [29] &quot;jtleek&quot; &quot;jtleek&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Escribiendo data frames como JSON</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">myjson &lt;- toJSON(iris, pretty=TRUE)
+cat(myjson)
+</code></pre>
+
+<pre><code>## [
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.7,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.6,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.6,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3.9,
+##     &quot;Petal.Length&quot;: 1.7,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.6,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.4,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.1,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3.7,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.8,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.8,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.1,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.3,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.1,
+##     &quot;Petal.Width&quot;: 0.1,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 4,
+##     &quot;Petal.Length&quot;: 1.2,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 4.4,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3.9,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 1.7,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.7,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.7,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.6,
+##     &quot;Sepal.Width&quot;: 3.6,
+##     &quot;Petal.Length&quot;: 1,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 1.7,
+##     &quot;Petal.Width&quot;: 0.5,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.8,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.9,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.2,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.2,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.7,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.8,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.2,
+##     &quot;Sepal.Width&quot;: 4.1,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.1,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 4.2,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 1.2,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 3.6,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.1,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.4,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.5,
+##     &quot;Sepal.Width&quot;: 2.3,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.4,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 1.3,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.5,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.6,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 1.9,
+##     &quot;Petal.Width&quot;: 0.4,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.8,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.3,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 1.6,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.6,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.3,
+##     &quot;Sepal.Width&quot;: 3.7,
+##     &quot;Petal.Length&quot;: 1.5,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 1.4,
+##     &quot;Petal.Width&quot;: 0.2,
+##     &quot;Species&quot;: &quot;setosa&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 4.7,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.9,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 4.9,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 2.3,
+##     &quot;Petal.Length&quot;: 4,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.5,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.6,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 4.7,
+##     &quot;Petal.Width&quot;: 1.6,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 2.4,
+##     &quot;Petal.Length&quot;: 3.3,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.6,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.6,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.2,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 3.9,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 2,
+##     &quot;Petal.Length&quot;: 3.5,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.9,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.2,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 2.2,
+##     &quot;Petal.Length&quot;: 4,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.7,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 3.6,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 4.4,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 4.1,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.2,
+##     &quot;Sepal.Width&quot;: 2.2,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 3.9,
+##     &quot;Petal.Width&quot;: 1.1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.9,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 4.8,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 4.9,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.7,
+##     &quot;Petal.Width&quot;: 1.2,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.3,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.6,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.4,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.8,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.8,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5,
+##     &quot;Petal.Width&quot;: 1.7,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 2.6,
+##     &quot;Petal.Length&quot;: 3.5,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 2.4,
+##     &quot;Petal.Length&quot;: 3.8,
+##     &quot;Petal.Width&quot;: 1.1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 2.4,
+##     &quot;Petal.Length&quot;: 3.7,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 3.9,
+##     &quot;Petal.Width&quot;: 1.2,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 1.6,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.4,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.6,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 4.7,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.3,
+##     &quot;Petal.Length&quot;: 4.4,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.1,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 4,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.5,
+##     &quot;Sepal.Width&quot;: 2.6,
+##     &quot;Petal.Length&quot;: 4.4,
+##     &quot;Petal.Width&quot;: 1.2,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.6,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.6,
+##     &quot;Petal.Length&quot;: 4,
+##     &quot;Petal.Width&quot;: 1.2,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5,
+##     &quot;Sepal.Width&quot;: 2.3,
+##     &quot;Petal.Length&quot;: 3.3,
+##     &quot;Petal.Width&quot;: 1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 4.2,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.2,
+##     &quot;Petal.Width&quot;: 1.2,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.2,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.2,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 4.3,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.1,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 3,
+##     &quot;Petal.Width&quot;: 1.1,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.1,
+##     &quot;Petal.Width&quot;: 1.3,
+##     &quot;Species&quot;: &quot;versicolor&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 6,
+##     &quot;Petal.Width&quot;: 2.5,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 1.9,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.1,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.9,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.5,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.8,
+##     &quot;Petal.Width&quot;: 2.2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.6,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 6.6,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 4.9,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 4.5,
+##     &quot;Petal.Width&quot;: 1.7,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.3,
+##     &quot;Sepal.Width&quot;: 2.9,
+##     &quot;Petal.Length&quot;: 6.3,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 5.8,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.2,
+##     &quot;Sepal.Width&quot;: 3.6,
+##     &quot;Petal.Length&quot;: 6.1,
+##     &quot;Petal.Width&quot;: 2.5,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.5,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 5.3,
+##     &quot;Petal.Width&quot;: 1.9,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.8,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.5,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.7,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 5,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 2.4,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 5.3,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.5,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.5,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.7,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 6.7,
+##     &quot;Petal.Width&quot;: 2.2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.7,
+##     &quot;Sepal.Width&quot;: 2.6,
+##     &quot;Petal.Length&quot;: 6.9,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 2.2,
+##     &quot;Petal.Length&quot;: 5,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.9,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 5.7,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.6,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.9,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.7,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 6.7,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 4.9,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 5.7,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.2,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 6,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.2,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 4.8,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.9,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.2,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.8,
+##     &quot;Petal.Width&quot;: 1.6,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.4,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 6.1,
+##     &quot;Petal.Width&quot;: 1.9,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.9,
+##     &quot;Sepal.Width&quot;: 3.8,
+##     &quot;Petal.Length&quot;: 6.4,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 2.2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.8,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 1.5,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.1,
+##     &quot;Sepal.Width&quot;: 2.6,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 1.4,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 7.7,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 6.1,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 2.4,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.4,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 5.5,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 4.8,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.9,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 5.4,
+##     &quot;Petal.Width&quot;: 2.1,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 5.6,
+##     &quot;Petal.Width&quot;: 2.4,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.9,
+##     &quot;Sepal.Width&quot;: 3.1,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.8,
+##     &quot;Sepal.Width&quot;: 2.7,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 1.9,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.8,
+##     &quot;Sepal.Width&quot;: 3.2,
+##     &quot;Petal.Length&quot;: 5.9,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3.3,
+##     &quot;Petal.Length&quot;: 5.7,
+##     &quot;Petal.Width&quot;: 2.5,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.7,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.2,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.3,
+##     &quot;Sepal.Width&quot;: 2.5,
+##     &quot;Petal.Length&quot;: 5,
+##     &quot;Petal.Width&quot;: 1.9,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.5,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.2,
+##     &quot;Petal.Width&quot;: 2,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 6.2,
+##     &quot;Sepal.Width&quot;: 3.4,
+##     &quot;Petal.Length&quot;: 5.4,
+##     &quot;Petal.Width&quot;: 2.3,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   },
+##   {
+##     &quot;Sepal.Length&quot;: 5.9,
+##     &quot;Sepal.Width&quot;: 3,
+##     &quot;Petal.Length&quot;: 5.1,
+##     &quot;Petal.Width&quot;: 1.8,
+##     &quot;Species&quot;: &quot;virginica&quot;
+##   }
+## ]
+</code></pre>
+
+<p><a href="http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/">http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Convertir de nuevo a JSON</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">iris2 &lt;- fromJSON(myjson)
+head(iris2)
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+<p><a href="http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/">http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>Otros recursos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><a href="http://www.json.org/">http://www.json.org/</a></li>
+<li>Un buen tutorial sobre jsonlite - <a href="http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/">http://www.r-bloggers.com/new-package-jsonlite-a-smarter-json-encoderdecoder/</a></li>
+<li><a href="http://cran.r-project.org/web/packages/jsonlite/vignettes/json-mapping.pdf">jsonlite vignette</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>Application programming interfaces</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/twitter.png" height=400 width=700/></p>
+
+<p><a href="https://dev.twitter.com/docs/api/1/get/blocks/blocking">https://dev.twitter.com/docs/api/1/get/blocks/blocking</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-42" style="background:;">
+  <hgroup>
+    <h2>Creando una aplicación</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/twitterapp1.png" height=400 width=700/></p>
+
+<p><a href="https://dev.twitter.com/appsmyapp%20%3C-%20oauth_app(%22twitter%22,%20key%20=" title="TYrWFPkFAkn4G5BbkWINYw">https://dev.twitter.com/apps</a>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-43" style="background:;">
+  <hgroup>
+    <h2>Creando una aplicación</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/twitterapp2.png" height=400 width=700/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>Creando una aplicación</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/twitterapp3.png" height=400 width=700/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(twitteR)
+setup_twitter_oauth(consumer_key = consumerKey, consumer_secret = consumerSecret,
+                    access_token = accestoken,access_secret = accestokensecret)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-46" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">u = sapply(usuarios, getUser)
+Universidad = sapply(u,name)
+Seguidores = sapply(u,followersCount)
+Siguiendo = sapply(u,friendsCount)
+Actualizaciones = sapply(u,statusesCount)
+Tweets = sapply(u,tweetCount)
+datos = data.frame(Universidad, Siguiendo, Seguidores, Actualizaciones, Tweets)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-48" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(twitteR)
+tweets &lt;- userTimeline(&quot;Unicordoba_Col&quot;, n = 10)
+head(tweets, 4)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] &quot;Unicordoba_Col: el PhD de Unicórdoba, Salim Matar fue designado por el CNA como Par Académico para Microbiología de la Universidad de los Andes. @unicorst&quot;
+## 
+## [[2]]
+## [1] &quot;Unicordoba_Col: Director del IIBT Salim Mattar elegido Par Académico para la Universidad de los Andes.@unicorst&quot;
+## 
+## [[3]]
+## [1] &quot;Unicordoba_Col: Alianza universitaria realiza encuentro con candidatos a Gobernación de Córdoba y Alcaldía de Montería http://t.co/pPuScMDgOD&quot;
+## 
+## [[4]]
+## [1] &quot;Unicordoba_Col: estudiantes y docentes interesados en asistir al conversatorio con candidatos favor inscribirse en sus facultades http://t.co/98HG6L3OuM&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R (WordCloud)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(twitteR)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+
+mach_tweets &lt;- searchTwitter(&quot;machine learning&quot;, n=500, lang=&quot;en&quot;)
+mach_text &lt;- sapply(mach_tweets, function(x) x$getText())
+mach_corpus &lt;- Corpus(VectorSource(mach_text))
+tdm &lt;- TermDocumentMatrix(mach_corpus, control = list(removePunctuation = TRUE,
+      stopwords = c(&quot;machine&quot;, &quot;learning&quot;, stopwords(&quot;english&quot;)),
+                     removeNumbers = TRUE, tolower = TRUE))
+
+m = as.matrix(tdm)
+word_freqs = sort(rowSums(m), decreasing=TRUE) 
+dm = data.frame(word=names(word_freqs), freq=word_freqs)
+wordcloud(dm$word, dm$freq, random.order=FALSE, colors=brewer.pal(8, &quot;Dark2&quot;))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>Accediendo Twitter desde R (WordCloud)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-20-1.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-51" style="background:;">
+  <hgroup>
+    <h2>Un vistazo general a la documentación</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Te puede autenticar con un nombre de usuario o una contraseña</li>
+<li>Las APIs más modernas usan algo como oauth</li>
+<li>Funciona de forma similar para Facebook, Google, Twitter, Githb, etc. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-52" style="background:;">
+  <hgroup>
+    <h2>MySQL</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>El software libre más usado en el diseño de bases de datos</li>
+<li>Ampliamente utilizado en aplicaciones basadas en Internet</li>
+<li>Los datos se estructuran en
+
+<ul>
+<li>Bases de datos</li>
+<li>Tablas dentro de las bases de datos</li>
+<li>Campos dentro de las tablas </li>
+</ul></li>
+<li>Cada fila es llamada un registro</li>
+</ul>
+
+<p><a href="http://es.wikipedia.org/wiki/MySQL">http://es.wikipedia.org/wiki/MySQL</a></p>
+
+<p><a href="http://www.mysql.com/">http://www.mysql.com/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-53" style="background:;">
+  <hgroup>
+    <h2>Ejemplo de la estructura</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/database-schema.png" height=400 width=600/></p>
+
+<p><a href="http://dev.mysql.com/doc/employee/en/sakila-structure.html">http://dev.mysql.com/doc/employee/en/sakila-structure.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-54" style="background:;">
+  <hgroup>
+    <h2>Primer paso - Instalar MySQL</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/installmysql.png" height=400 width=600/></p>
+
+<p><a href="http://dev.mysql.com/doc/refman/5.7/en/installing.html">http://dev.mysql.com/doc/refman/5.7/en/installing.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-55" style="background:;">
+  <hgroup>
+    <h2>Segundo paso - Instalar RMySQL</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>En  Mac y Linux: <code>install.packages(&quot;RMySQL&quot;)</code></li>
+<li>En Windows: 
+
+<ul>
+<li>Instrucciones - <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL">http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL</a> </li>
+<li>Guía potencialmente útil - <a href="http://www.ahschulz.de/2013/07/23/installing-rmysql-under-windows/">http://www.ahschulz.de/2013/07/23/installing-rmysql-under-windows/</a><br></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-56" style="background:;">
+  <hgroup>
+    <h2>Ejemplo - Base de datos UCSC</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/ucsc.png" height=400 width=600/></p>
+
+<p><a href="http://genome.ucsc.edu/">http://genome.ucsc.edu/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-57" style="background:;">
+  <hgroup>
+    <h2>UCSC MySQL</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img class=center src="/home/kevin/GettingData/assets/img/ucscmysql.png" height=400 width=600/></p>
+
+<p><a href="http://genome.ucsc.edu/goldenPath/help/mysql.html">http://genome.ucsc.edu/goldenPath/help/mysql.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-58" style="background:;">
+  <hgroup>
+    <h2>Conectando y listando las bases de datos</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(RMySQL)
+ucscDb &lt;- dbConnect(MySQL(),user=&quot;genome&quot;, 
+                    host=&quot;genome-mysql.cse.ucsc.edu&quot;)
+result &lt;- dbGetQuery(ucscDb,&quot;show databases;&quot;); dbDisconnect(ucscDb);
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<pre><code class="r">head(result, 4)
+</code></pre>
+
+<pre><code>##             Database
+## 1 information_schema
+## 2            ailMel1
+## 3            allMis1
+## 4            anoCar1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-59" style="background:;">
+  <hgroup>
+    <h2>Realizando la conexión con hg19 y listando sus tablas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">hg19 &lt;- dbConnect(MySQL(),user=&quot;genome&quot;, db=&quot;hg19&quot;,
+                    host=&quot;genome-mysql.cse.ucsc.edu&quot;)
+allTables &lt;- dbListTables(hg19)
+length(allTables)
+</code></pre>
+
+<pre><code>## [1] 11014
+</code></pre>
+
+<pre><code class="r">allTables[1:5]
+</code></pre>
+
+<pre><code>## [1] &quot;HInv&quot;         &quot;HInvGeneMrna&quot; &quot;acembly&quot;      &quot;acemblyClass&quot;
+## [5] &quot;acemblyPep&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-60" style="background:;">
+  <hgroup>
+    <h2>Obtener las dimensiones de una tabla específica</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">hg19 &lt;- dbConnect(MySQL(),user=&quot;genome&quot;, db=&quot;hg19&quot;,
+                    host=&quot;genome-mysql.cse.ucsc.edu&quot;)
+dbListFields(hg19,&quot;affyU133Plus2&quot;)
+</code></pre>
+
+<pre><code>##  [1] &quot;bin&quot;         &quot;matches&quot;     &quot;misMatches&quot;  &quot;repMatches&quot;  &quot;nCount&quot;     
+##  [6] &quot;qNumInsert&quot;  &quot;qBaseInsert&quot; &quot;tNumInsert&quot;  &quot;tBaseInsert&quot; &quot;strand&quot;     
+## [11] &quot;qName&quot;       &quot;qSize&quot;       &quot;qStart&quot;      &quot;qEnd&quot;        &quot;tName&quot;      
+## [16] &quot;tSize&quot;       &quot;tStart&quot;      &quot;tEnd&quot;        &quot;blockCount&quot;  &quot;blockSizes&quot; 
+## [21] &quot;qStarts&quot;     &quot;tStarts&quot;
+</code></pre>
+
+<pre><code class="r">dbGetQuery(hg19, &quot;select count(*) from affyU133Plus2&quot;)
+</code></pre>
+
+<pre><code>##   count(*)
+## 1    58463
+</code></pre>
+
+<pre><code class="r">dbDisconnect(hg19)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-61" style="background:;">
+  <hgroup>
+    <h2>Seleccionar un subconjunto especifico</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">hg19 &lt;- dbConnect(MySQL(),user=&quot;genome&quot;, db=&quot;hg19&quot;,
+                    host=&quot;genome-mysql.cse.ucsc.edu&quot;)
+query &lt;- dbSendQuery(hg19, &quot;select * from affyU133Plus2 where misMatches between 1 and 3&quot;)
+affyMis &lt;- fetch(query); quantile(affyMis$misMatches)
+</code></pre>
+
+<pre><code>##   0%  25%  50%  75% 100% 
+##    1    1    2    2    3
+</code></pre>
+
+<pre><code class="r">affyMisSmall &lt;- fetch(query,n=10); dbClearResult(query);
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<pre><code class="r">dim(affyMisSmall)
+</code></pre>
+
+<pre><code>## [1] 10 22
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-62" style="background:;">
+  <hgroup>
+    <h2>Nunca olvides cerrar la conexión!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">dbDisconnect(hg19)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-63" style="background:;">
+  <hgroup>
+    <h2>Otros recursos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>RMySQL vignette <a href="http://cran.r-project.org/web/packages/RMySQL/RMySQL.pdf">http://cran.r-project.org/web/packages/RMySQL/RMySQL.pdf</a></li>
+<li>Lista de comandos <a href="http://www.pantz.org/software/mysql/mysqlcommands.html">http://www.pantz.org/software/mysql/mysqlcommands.html</a></li>
+<li><strong>Nunca , nunca, pero nunca hagas delete, add o join en esta base de datos. Solo select.</strong></li>
+<li>En general hay que ser muy cuidadoso con los comandos en MySql </li>
+<li>Una buena entrada de un blog que resume algunos otros comandos <a href="http://www.r-bloggers.com/mysql-and-r/">http://www.r-bloggers.com/mysql-and-r/</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-64" style="background:;">
+  <hgroup>
+    <h2>Hay un paquete para eso</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Aquí voy a revisar brevemente algunos paquetes útiles</li>
+<li>En general, la mejor manera de saber si existe el paquete R es en Google</li>
+<li>Por ejemplo: &quot;MySQL R package&quot;</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-65" style="background:;">
+  <hgroup>
+    <h2>Interactuar de manera más directa con los archivos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>file - abrir una conexión a un archivo de texto</li>
+<li>url - abrir una conexión a una url</li>
+<li>gzfile - abrir una conexión a un archivo .gz file</li>
+<li>bzfile - abrir una conexión a un archivo .bz2 file</li>
+<li><em>?connections</em> Para mas información</li>
+<li><span style="color:red">Recuerda cerrar las conexiones</span></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-66" style="background:;">
+  <hgroup>
+    <h2>Paquetes externos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Cargan datos desde Minitab, S, SAS, SPSS, Stata,Systat</li>
+<li>Funciones básicas <em>read.foo</em>
+
+<ul>
+<li>read.arff (Weka)</li>
+<li>read.dta (Stata)</li>
+<li>read.mtp (Minitab)</li>
+<li>read.octave (Octave)</li>
+<li>read.spss (SPSS)</li>
+<li>read.xport (SAS)</li>
+<li>Para mas detalles vea la página de ayuda <a href="http://cran.r-project.org/web/packages/foreign/foreign.pdf">http://cran.r-project.org/web/packages/foreign/foreign.pdf</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-67" style="background:;">
+  <hgroup>
+    <h2>Ejemplos de otros paquetes de base de datos</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>RPostresSQL provee una conexión a la base de datos desde R. Tutorial-<a href="https://code.google.com/p/rpostgresql/">https://code.google.com/p/rpostgresql/</a>, help file-<a href="http://cran.r-project.org/web/packages/RPostgreSQL/RPostgreSQL.pdf">http://cran.r-project.org/web/packages/RPostgreSQL/RPostgreSQL.pdf</a></li>
+<li>RODBC proporciona interfaces a varias bases de datos que incluyen a PostgreQL, MySQL, Microsoft Access and SQLite. Tutorial - <a href="http://cran.r-project.org/web/packages/RODBC/vignettes/RODBC.pdf">http://cran.r-project.org/web/packages/RODBC/vignettes/RODBC.pdf</a>, help file - <a href="http://cran.r-project.org/web/packages/RODBC/RODBC.pdf">http://cran.r-project.org/web/packages/RODBC/RODBC.pdf</a></li>
+<li>RMongo <a href="http://cran.r-project.org/web/packages/RMongo/RMongo.pdf">http://cran.r-project.org/web/packages/RMongo/RMongo.pdf</a> (ejemplo de R Mongo <a href="http://www.r-bloggers.com/r-and-mongodb/">http://www.r-bloggers.com/r-and-mongodb/</a>) and <a href="http://cran.r-project.org/web/packages/rmongodb/rmongodb.pdf">rmongodb</a> provee interfaces a MongoDb. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-68" style="background:;">
+  <hgroup>
+    <h2>Leyendo imagenes</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>jpeg - <a href="http://cran.r-project.org/web/packages/jpeg/index.html">http://cran.r-project.org/web/packages/jpeg/index.html</a></li>
+<li>readbitmap - <a href="http://cran.r-project.org/web/packages/readbitmap/index.html">http://cran.r-project.org/web/packages/readbitmap/index.html</a></li>
+<li>png - <a href="http://cran.r-project.org/web/packages/png/index.html">http://cran.r-project.org/web/packages/png/index.html</a></li>
+<li>EBImage(Bioconductor)-<a href="http://www.bioconductor.org/packages/2.13/bioc/html/EBImage.html">http://www.bioconductor.org/packages/2.13/bioc/html/EBImage.html</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-69" style="background:;">
+  <hgroup>
+    <h2>Leyendo datos GIS</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>rgdal - <a href="http://cran.r-project.org/web/packages/rgdal/index.html">http://cran.r-project.org/web/packages/rgdal/index.html</a></li>
+<li>rgeos - <a href="http://cran.r-project.org/web/packages/rgeos/index.html">http://cran.r-project.org/web/packages/rgeos/index.html</a></li>
+<li>raster - <a href="http://cran.r-project.org/web/packages/raster/index.html">http://cran.r-project.org/web/packages/raster/index.html</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-70" style="background:;">
+  <hgroup>
+    <h2>Leyendo datos de música</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>tuneR - <a href="http://cran.r-project.org/web/packages/tuneR/">http://cran.r-project.org/web/packages/tuneR/</a></li>
+<li>seewave - <a href="http://rug.mnhn.fr/seewave/">http://rug.mnhn.fr/seewave/</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-71" style="background:;">
+  <hgroup>
+    <h2>Indexado - breve repaso</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">set.seed(13435)
+X &lt;- data.frame(&quot;var1&quot;=sample(1:5),&quot;var2&quot;=sample(6:10),&quot;var3&quot;=sample(11:15))
+X &lt;- X[sample(1:5),]; X$var2[c(1,3)] = NA
+X
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 1    2   NA   15
+## 4    1   10   11
+## 2    3   NA   12
+## 3    5    6   14
+## 5    4    9   13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-72" style="background:;">
+  <hgroup>
+    <h2>Indexado - breve repaso</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X[,1]
+</code></pre>
+
+<pre><code>## [1] 2 1 3 5 4
+</code></pre>
+
+<pre><code class="r">X[,&quot;var1&quot;]
+</code></pre>
+
+<pre><code>## [1] 2 1 3 5 4
+</code></pre>
+
+<pre><code class="r">X[1:2,&quot;var2&quot;]
+</code></pre>
+
+<pre><code>## [1] NA 10
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-73" style="background:;">
+  <hgroup>
+    <h2>Logicos</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X[(X$var1 &lt;= 3 &amp; X$var3 &gt; 11),]
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 1    2   NA   15
+## 2    3   NA   12
+</code></pre>
+
+<pre><code class="r">X[(X$var1 &lt;= 3 | X$var3 &gt; 15),]
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 1    2   NA   15
+## 4    1   10   11
+## 2    3   NA   12
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-74" style="background:;">
+  <hgroup>
+    <h2>Tratando con datos faltantes</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X[which(X$var2 &gt; 8),]
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 4    1   10   11
+## 5    4    9   13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-75" style="background:;">
+  <hgroup>
+    <h2>Ordenado</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">sort(X$var1)
+</code></pre>
+
+<pre><code>## [1] 1 2 3 4 5
+</code></pre>
+
+<pre><code class="r">sort(X$var1,decreasing=TRUE)
+</code></pre>
+
+<pre><code>## [1] 5 4 3 2 1
+</code></pre>
+
+<pre><code class="r">sort(X$var2,na.last=TRUE)
+</code></pre>
+
+<pre><code>## [1]  6  9 10 NA NA
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-76" style="background:;">
+  <hgroup>
+    <h2>Ordenando</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X[order(X$var1),]
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 4    1   10   11
+## 1    2   NA   15
+## 2    3   NA   12
+## 5    4    9   13
+## 3    5    6   14
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-77" style="background:;">
+  <hgroup>
+    <h2>Ordenando</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X[order(X$var1,X$var3),]
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 4    1   10   11
+## 1    2   NA   15
+## 2    3   NA   12
+## 5    4    9   13
+## 3    5    6   14
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-78" style="background:;">
+  <hgroup>
+    <h2>Ordenando con plyr</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(plyr)
+arrange(X,var1)
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 1    1   10   11
+## 2    2   NA   15
+## 3    3   NA   12
+## 4    4    9   13
+## 5    5    6   14
+</code></pre>
+
+<pre><code class="r">arrange(X,desc(var1))
+</code></pre>
+
+<pre><code>##   var1 var2 var3
+## 1    5    6   14
+## 2    4    9   13
+## 3    3   NA   12
+## 4    2   NA   15
+## 5    1   10   11
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-79" style="background:;">
+  <hgroup>
+    <h2>Agregando filas y columnas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X$var4 &lt;- rnorm(5)
+X
+</code></pre>
+
+<pre><code>##   var1 var2 var3       var4
+## 1    2   NA   15  0.1875960
+## 4    1   10   11  1.7869764
+## 2    3   NA   12  0.4966936
+## 3    5    6   14  0.0631830
+## 5    4    9   13 -0.5361329
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-80" style="background:;">
+  <hgroup>
+    <h2>Agregando filas y columnas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">Y &lt;- cbind(X,rnorm(5))
+Y
+</code></pre>
+
+<pre><code>##   var1 var2 var3       var4    rnorm(5)
+## 1    2   NA   15  0.1875960  0.62578490
+## 4    1   10   11  1.7869764 -2.45083750
+## 2    3   NA   12  0.4966936  0.08909424
+## 3    5    6   14  0.0631830  0.47838570
+## 5    4    9   13 -0.5361329  1.00053336
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-81" style="background:;">
+  <hgroup>
+    <h2>Obteniendo datos de la web</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">if(!file.exists(&quot;./data&quot;)){dir.create(&quot;./data&quot;)}
+fileUrl &lt;- &quot;http://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD&quot;
+download.file(fileUrl,destfile=&quot;./data/restaurants.csv&quot;)
+restData &lt;- read.csv(&quot;./data/restaurants.csv&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-82" style="background:;">
+  <hgroup>
+    <h2>Una mirada a los datos</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">head(restData,n=3)
+</code></pre>
+
+<pre><code>##    name zipCode neighborhood councilDistrict policeDistrict
+## 1   410   21206    Frankford               2   NORTHEASTERN
+## 2  1919   21231  Fells Point               1   SOUTHEASTERN
+## 3 SAUTE   21224       Canton               1   SOUTHEASTERN
+##                          Location.1
+## 1 4509 BELAIR ROAD\nBaltimore, MD\n
+## 2    1919 FLEET ST\nBaltimore, MD\n
+## 3   2844 HUDSON ST\nBaltimore, MD\n
+</code></pre>
+
+<pre><code class="r">tail(restData,n=3)
+</code></pre>
+
+<pre><code>##                  name zipCode  neighborhood councilDistrict policeDistrict
+## 1325 ZINK&#39;S CAF\u0090   21213 Belair-Edison              13   NORTHEASTERN
+## 1326     ZISSIMOS BAR   21211       Hampden               7       NORTHERN
+## 1327           ZORBAS   21224     Greektown               2   SOUTHEASTERN
+##                              Location.1
+## 1325 3300 LAWNVIEW AVE\nBaltimore, MD\n
+## 1326      1023 36TH ST\nBaltimore, MD\n
+## 1327  4710 EASTERN Ave\nBaltimore, MD\n
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-83" style="background:;">
+  <hgroup>
+    <h2>Haciendo un summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">summary(restData)
+</code></pre>
+
+<pre><code>##                            name         zipCode             neighborhood
+##  MCDONALD&#39;S                  :   8   Min.   :-21226   Downtown    :128  
+##  POPEYES FAMOUS FRIED CHICKEN:   7   1st Qu.: 21202   Fells Point : 91  
+##  SUBWAY                      :   6   Median : 21218   Inner Harbor: 89  
+##  KENTUCKY FRIED CHICKEN      :   5   Mean   : 21185   Canton      : 81  
+##  BURGER KING                 :   4   3rd Qu.: 21226   Federal Hill: 42  
+##  DUNKIN DONUTS               :   4   Max.   : 21287   Mount Vernon: 33  
+##  (Other)                     :1293                    (Other)     :863  
+##  councilDistrict       policeDistrict
+##  Min.   : 1.000   SOUTHEASTERN:385   
+##  1st Qu.: 2.000   CENTRAL     :288   
+##  Median : 9.000   SOUTHERN    :213   
+##  Mean   : 7.191   NORTHERN    :157   
+##  3rd Qu.:11.000   NORTHEASTERN: 72   
+##  Max.   :14.000   EASTERN     : 67   
+##                   (Other)     :145   
+##                         Location.1      
+##  1101 RUSSELL ST\nBaltimore, MD\n:   9  
+##  201 PRATT ST\nBaltimore, MD\n   :   8  
+##  2400 BOSTON ST\nBaltimore, MD\n :   8  
+##  300 LIGHT ST\nBaltimore, MD\n   :   5  
+##  300 CHARLES ST\nBaltimore, MD\n :   4  
+##  301 LIGHT ST\nBaltimore, MD\n   :   4  
+##  (Other)                         :1289
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-84" style="background:;">
+  <hgroup>
+    <h2>Información más detallada</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">str(restData)
+</code></pre>
+
+<pre><code>## &#39;data.frame&#39;:    1327 obs. of  6 variables:
+##  $ name           : Factor w/ 1277 levels &quot;1919&quot;,&quot;19TH HOLE&quot;,..: 9 1 990 3 4 2 6 7 8 5 ...
+##  $ zipCode        : int  21206 21231 21224 21211 21223 21218 21205 21211 21205 21231 ...
+##  $ neighborhood   : Factor w/ 173 levels &quot;Abell&quot;,&quot;Arlington&quot;,..: 53 52 18 66 104 33 98 133 98 157 ...
+##  $ councilDistrict: int  2 1 1 14 9 14 13 7 13 1 ...
+##  $ policeDistrict : Factor w/ 9 levels &quot;CENTRAL&quot;,&quot;EASTERN&quot;,..: 3 6 6 4 8 3 6 4 6 6 ...
+##  $ Location.1     : Factor w/ 1210 levels &quot;1000 ALICEANNA ST\nBaltimore, MD\n&quot;,..: 833 324 550 755 484 532 498 525 500 571 ...
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-85" style="background:;">
+  <hgroup>
+    <h2>Quantiles de las variables cuantitativas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">quantile(restData$councilDistrict,na.rm=TRUE)
+</code></pre>
+
+<pre><code>##   0%  25%  50%  75% 100% 
+##    1    2    9   11   14
+</code></pre>
+
+<pre><code class="r">quantile(restData$councilDistrict,probs=c(0.5,0.75,0.9))
+</code></pre>
+
+<pre><code>## 50% 75% 90% 
+##   9  11  12
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-86" style="background:;">
+  <hgroup>
+    <h2>Realizando tablas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">table(restData$zipCode,useNA=&quot;ifany&quot;)
+</code></pre>
+
+<pre><code>## 
+## -21226  21201  21202  21205  21206  21207  21208  21209  21210  21211 
+##      1    136    201     27     30      4      1      8     23     41 
+##  21212  21213  21214  21215  21216  21217  21218  21220  21222  21223 
+##     28     31     17     54     10     32     69      1      7     56 
+##  21224  21225  21226  21227  21229  21230  21231  21234  21237  21239 
+##    199     19     18      4     13    156    127      7      1      3 
+##  21251  21287 
+##      2      1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-87" style="background:;">
+  <hgroup>
+    <h2>Realizando tablas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">table(restData$councilDistrict,restData$zipCode)
+</code></pre>
+
+<pre><code>##     
+##      -21226 21201 21202 21205 21206 21207 21208 21209 21210 21211 21212
+##   1       0     0    37     0     0     0     0     0     0     0     0
+##   2       0     0     0     3    27     0     0     0     0     0     0
+##   3       0     0     0     0     0     0     0     0     0     0     0
+##   4       0     0     0     0     0     0     0     0     0     0    27
+##   5       0     0     0     0     0     3     0     6     0     0     0
+##   6       0     0     0     0     0     0     0     1    19     0     0
+##   7       0     0     0     0     0     0     0     1     0    27     0
+##   8       0     0     0     0     0     1     0     0     0     0     0
+##   9       0     1     0     0     0     0     0     0     0     0     0
+##   10      1     0     1     0     0     0     0     0     0     0     0
+##   11      0   115   139     0     0     0     1     0     0     0     1
+##   12      0    20    24     4     0     0     0     0     0     0     0
+##   13      0     0     0    20     3     0     0     0     0     0     0
+##   14      0     0     0     0     0     0     0     0     4    14     0
+##     
+##      21213 21214 21215 21216 21217 21218 21220 21222 21223 21224 21225
+##   1      2     0     0     0     0     0     0     7     0   140     1
+##   2      0     0     0     0     0     0     0     0     0    54     0
+##   3      2    17     0     0     0     3     0     0     0     0     0
+##   4      0     0     0     0     0     0     0     0     0     0     0
+##   5      0     0    31     0     0     0     0     0     0     0     0
+##   6      0     0    15     1     0     0     0     0     0     0     0
+##   7      0     0     6     7    15     6     0     0     0     0     0
+##   8      0     0     0     0     0     0     0     0     2     0     0
+##   9      0     0     0     2     8     0     0     0    53     0     0
+##   10     0     0     0     0     0     0     1     0     0     0    18
+##   11     0     0     0     0     9     0     0     0     1     0     0
+##   12    13     0     0     0     0    26     0     0     0     0     0
+##   13    13     0     1     0     0     0     0     0     0     5     0
+##   14     1     0     1     0     0    34     0     0     0     0     0
+##     
+##      21226 21227 21229 21230 21231 21234 21237 21239 21251 21287
+##   1      0     0     0     1   124     0     0     0     0     0
+##   2      0     0     0     0     0     0     1     0     0     0
+##   3      0     1     0     0     0     7     0     0     2     0
+##   4      0     0     0     0     0     0     0     3     0     0
+##   5      0     0     0     0     0     0     0     0     0     0
+##   6      0     0     0     0     0     0     0     0     0     0
+##   7      0     0     0     0     0     0     0     0     0     0
+##   8      0     2    13     0     0     0     0     0     0     0
+##   9      0     0     0    11     0     0     0     0     0     0
+##   10    18     0     0   133     0     0     0     0     0     0
+##   11     0     0     0    11     0     0     0     0     0     0
+##   12     0     0     0     0     2     0     0     0     0     0
+##   13     0     1     0     0     1     0     0     0     0     1
+##   14     0     0     0     0     0     0     0     0     0     0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-88" style="background:;">
+  <hgroup>
+    <h2>Revisando por datos faltantes</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">sum(is.na(restData$councilDistrict))
+</code></pre>
+
+<pre><code>## [1] 0
+</code></pre>
+
+<pre><code class="r">any(is.na(restData$councilDistrict))
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+<pre><code class="r">all(restData$zipCode &gt; 0)
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-89" style="background:;">
+  <hgroup>
+    <h2>Suma de filas y columnas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">colSums(is.na(restData))
+</code></pre>
+
+<pre><code>##            name         zipCode    neighborhood councilDistrict 
+##               0               0               0               0 
+##  policeDistrict      Location.1 
+##               0               0
+</code></pre>
+
+<pre><code class="r">all(colSums(is.na(restData))==0)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-90" style="background:;">
+  <hgroup>
+    <h2>Valores con caractrísticas especificas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">table(restData$zipCode %in% c(&quot;21212&quot;))
+</code></pre>
+
+<pre><code>## 
+## FALSE  TRUE 
+##  1299    28
+</code></pre>
+
+<pre><code class="r">table(restData$zipCode %in% c(&quot;21212&quot;,&quot;21213&quot;))
+</code></pre>
+
+<pre><code>## 
+## FALSE  TRUE 
+##  1268    59
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-91" style="background:;">
+  <hgroup>
+    <h2>Valores con caractrísticas especificas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">restData[restData$zipCode %in% c(&quot;21212&quot;,&quot;21213&quot;),]
+</code></pre>
+
+<pre><code>##                                      name zipCode
+## 29                      BAY ATLANTIC CLUB   21212
+## 39                            BERMUDA BAR   21213
+## 92                              ATWATER&#39;S   21212
+## 111            BALTIMORE ESTONIAN SOCIETY   21213
+## 187                              CAFE ZEN   21212
+## 220                   CERIELLO FINE FOODS   21212
+## 266    CLIFTON PARK GOLF COURSE SNACK BAR   21213
+## 276                CLUB HOUSE BAR &amp; GRILL   21213
+## 289                 CLUBHOUSE BAR &amp; GRILL   21213
+## 291                           COCKY LOU&#39;S   21213
+## 362       DREAM TAVERN, CARRIBEAN  U.S.A.   21213
+## 373                         DUNKIN DONUTS   21212
+## 383        EASTSIDE  SPORTS  SOCIAL  CLUB   21213
+## 417                      FIELDS OLD TRAIL   21212
+## 475                             GRAND CRU   21212
+## 545                           RANDY&#39;S BAR   21213
+## 604     MURPHY&#39;S NEIGHBORHOOD BAR &amp; GRILL   21212
+## 616                                NEOPOL   21212
+## 620             NEW CLUB THUNDERBIRD INC.   21213
+## 626                    NEW MAYFIELD, INC.   21213
+## 678                          IKAN SEAFOOD   21212
+## 711                          KAY-CEE CLUB   21212
+## 763                                LA&#39;RAE   21213
+## 777                  LEMONGRASS BALTIMORE   21213
+## 779                   LEN&#39;S SANDWICH SHOP   21213
+## 845                            MCDONALD&#39;S   21213
+## 852                            MCDONALD&#39;S   21212
+## 873                  NEW REX LIQUORS,INC.   21212
+## 895                             OK TAVERN   21213
+## 919                          PANERA BREAD   21212
+## 940                    PEIWEI ASIAN DINER   21212
+## 949                   PERGUSA ENTERPRISES   21212
+## 957               PHANTOM&#39;S BAR AND GRILL   21213
+## 976          POPEYES FAMOUS FRIED CHICKEN   21212
+## 994                         ROBBIE&#39;S NEST   21213
+## 1017                          RUTLAND BAR   21213
+## 1018                      RYAN&#39;S DAUGHTER   21212
+## 1022         saigon remembered restaurant   21212
+## 1053                SHIRLEY&#39;S  HONEY HOLE   21213
+## 1120                     STEEPLE CHASE II   21213
+## 1122                               SUBWAY   21213
+## 1153                              TAM-TAM   21212
+## 1155                                TASTE   21212
+## 1159                         TAYLORS EAST   21213
+## 1186                THE EDGE BAR &amp; LOUNGE   21213
+## 1187 THE EDGE BAR &amp; LOUNGE - KITCHEN AREA   21213
+## 1198               THE HOLLOW BAR &amp; GRILL   21212
+## 1209             THE NEW BUCKETT&#39;S LOUNGE   21213
+## 1232                         THREE  ACE&#39;S   21213
+## 1246                 TORAIN&#39;S  HIDE-A-WAY   21213
+## 1259                    TSUNAMI BALTIMORE   21213
+## 1287                         VITO&#39;S PIZZA   21212
+## 1298 WENDY&#39;S OLD FASHIONED HAMBURGERS #96   21212
+## 1304                 WHITTEN&#39;S  (4502-04)   21213
+## 1312                          wozi lounge   21212
+## 1319           YETI RESTAURANT &amp; CARRYOUT   21212
+## 1320                     YORK CLUB TAVERN   21212
+## 1323            ZEN WEST ROADSIDE CANTINA   21212
+## 1325                     ZINK&#39;S CAF\u0090   21213
+##                     neighborhood councilDistrict policeDistrict
+## 29                      Downtown              11        CENTRAL
+## 39                 Broadway East              12        EASTERN
+## 92     Chinquapin Park-Belvedere               4       NORTHERN
+## 111           South Clifton Park              12        EASTERN
+## 187                     Rosebank               4       NORTHERN
+## 220    Chinquapin Park-Belvedere               4       NORTHERN
+## 266                  Darley Park              14   NORTHEASTERN
+## 276  Orangeville Industrial Area              13        EASTERN
+## 289  Orangeville Industrial Area              13        EASTERN
+## 291                Broadway East              12        EASTERN
+## 362                Broadway East              13        EASTERN
+## 373                     Homeland               4       NORTHERN
+## 383                Broadway East              13        EASTERN
+## 417                   Mid-Govans               4       NORTHERN
+## 475    Chinquapin Park-Belvedere               4       NORTHERN
+## 545                Broadway East              12        EASTERN
+## 604                   Mid-Govans               4       NORTHERN
+## 616    Chinquapin Park-Belvedere               4       NORTHERN
+## 620                  Middle East              13        EASTERN
+## 626                Belair-Edison              13   NORTHEASTERN
+## 678    Chinquapin Park-Belvedere               4       NORTHERN
+## 711                     Homeland               4       NORTHERN
+## 763                       Oliver              12        EASTERN
+## 777                 Little Italy               1   SOUTHEASTERN
+## 779                Broadway East              12        EASTERN
+## 845           South Clifton Park              12        EASTERN
+## 852               Radnor-Winston               4       NORTHERN
+## 873                  Wilson Park               4       NORTHERN
+## 895                Biddle Street              13        EASTERN
+## 919                  Lake Walker               4       NORTHERN
+## 940                   Cedarcroft               4       NORTHERN
+## 949                     Rosebank               4       NORTHERN
+## 957                Belair-Edison               3   NORTHEASTERN
+## 976               Winston-Govans               4       NORTHERN
+## 994                Broadway East              12        EASTERN
+## 1017               Broadway East              12        EASTERN
+## 1018   Chinquapin Park-Belvedere               4       NORTHERN
+## 1022                  Mid-Govans               4       NORTHERN
+## 1053               Broadway East              13        EASTERN
+## 1120               Biddle Street              13        EASTERN
+## 1122                      Oliver              12        EASTERN
+## 1153                  Mid-Govans               4       NORTHERN
+## 1155                  Mid-Govans               4       NORTHERN
+## 1159                       Berea              13        EASTERN
+## 1186               Broadway East              12        EASTERN
+## 1187               Broadway East              12        EASTERN
+## 1198                    Rosebank               4       NORTHERN
+## 1209               Broadway East              13        EASTERN
+## 1232               Belair-Edison               3   NORTHEASTERN
+## 1246               Broadway East              12        EASTERN
+## 1259                Little Italy               1   SOUTHEASTERN
+## 1287                  Cedarcroft               4       NORTHERN
+## 1298                    Homeland               4       NORTHERN
+## 1304           Claremont-Freedom              13   NORTHEASTERN
+## 1312                    Guilford               4       NORTHERN
+## 1319                    Rosebank               4       NORTHERN
+## 1320                    Homeland               4       NORTHERN
+## 1323                    Rosebank               4       NORTHERN
+## 1325               Belair-Edison              13   NORTHEASTERN
+##                                Location.1
+## 29        206 REDWOOD ST\nBaltimore, MD\n
+## 39        1801 NORTH AVE\nBaltimore, MD\n
+## 92     529 BELVEDERE AVE\nBaltimore, MD\n
+## 111       1932 BELAIR RD\nBaltimore, MD\n
+## 187    438 BELVEDERE AVE\nBaltimore, MD\n
+## 220    529 BELVEDERE AVE\nBaltimore, MD\n
+## 266        2701 ST LO DR\nBaltimore, MD\n
+## 276      4217 ERDMAN AVE\nBaltimore, MD\n
+## 289      4217 ERDMAN AVE\nBaltimore, MD\n
+## 291       2101 NORTH AVE\nBaltimore, MD\n
+## 362   2300 LAFAYETTE AVE\nBaltimore, MD\n
+## 373         5422 YORK RD\nBaltimore, MD\n
+## 383  1203 COLLINGTON AVE\nBaltimore, MD\n
+## 417         5723 YORK RD\nBaltimore, MD\n
+## 475    527 BELVEDERE AVE\nBaltimore, MD\n
+## 545       2135 NORTH AVE\nBaltimore, MD\n
+## 604         5847 YORK RD\nBaltimore, MD\n
+## 616    529 BELVEDERE AVE\nBaltimore, MD\n
+## 620        2201 CHASE ST\nBaltimore, MD\n
+## 626       3349 BELAIR RD\nBaltimore, MD\n
+## 678    529 BELVEDERE AVE\nBaltimore, MD\n
+## 711     201 HOMELAND AVE\nBaltimore, MD\n
+## 763      1000 HOFFMAN ST\nBaltimore, MD\n
+## 777     1300 BANK STREET\nBaltimore, MD\n
+## 779   1500 WASHINGTON ST\nBaltimore, MD\n
+## 845        2001 BROADWAY\nBaltimore, MD\n
+## 852         5100 YORK RD\nBaltimore, MD\n
+## 873         4637 YORK RD\nBaltimore, MD\n
+## 895       2301 BIDDLE ST\nBaltimore, MD\n
+## 919     6307 1 2 YORK RD\nBaltimore, MD\n
+## 940         6302 YORK RD\nBaltimore, MD\n
+## 949         5928 YORK RD\nBaltimore, MD\n
+## 957       3539 BELAIR RD\nBaltimore, MD\n
+## 976         5002 YORK RD\nBaltimore, MD\n
+## 994       2250 NORTH AVE\nBaltimore, MD\n
+## 1017    1508 RUTLAND AVE\nBaltimore, MD\n
+## 1018   600 BELVEDERE AVE\nBaltimore, MD\n
+## 1022        5857 york rd\nBaltimore, MD\n
+## 1053      2300 OLIVER ST\nBaltimore, MD\n
+## 1120       2401 CHASE ST\nBaltimore, MD\n
+## 1122      1400 NORTH AVE\nBaltimore, MD\n
+## 1153        5722 YORK RD\nBaltimore, MD\n
+## 1155   510 BELVEDERE AVE\nBaltimore, MD\n
+## 1159     1201 POTOMAC ST\nBaltimore, MD\n
+## 1186     2015 FEDERAL ST\nBaltimore, MD\n
+## 1187     2015 FEDERAL ST\nBaltimore, MD\n
+## 1198        5921 YORK RD\nBaltimore, MD\n
+## 1209     1432 CHESTER ST\nBaltimore, MD\n
+## 1232      3534 belair RD\nBaltimore, MD\n
+## 1246   1701 ELLSWORTH ST\nBaltimore, MD\n
+## 1259        1300 BANK ST\nBaltimore, MD\n
+## 1287        6304 YORK RD\nBaltimore, MD\n
+## 1298        5615 YORK RD\nBaltimore, MD\n
+## 1304     4502 ERDMAN AVE\nBaltimore, MD\n
+## 1312        4515 YORK RD\nBaltimore, MD\n
+## 1319        5926 YORK RD\nBaltimore, MD\n
+## 1320        5407 YORK RD\nBaltimore, MD\n
+## 1323        5916 YORK RD\nBaltimore, MD\n
+## 1325   3300 LAWNVIEW AVE\nBaltimore, MD\n
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-92" style="background:;">
+  <hgroup>
+    <h2>Tablas cruzadas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data(UCBAdmissions)
+DF = as.data.frame(UCBAdmissions)
+summary(DF)
+</code></pre>
+
+<pre><code>##       Admit       Gender   Dept       Freq      
+##  Admitted:12   Male  :12   A:4   Min.   :  8.0  
+##  Rejected:12   Female:12   B:4   1st Qu.: 80.0  
+##                            C:4   Median :170.0  
+##                            D:4   Mean   :188.6  
+##                            E:4   3rd Qu.:302.5  
+##                            F:4   Max.   :512.0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-93" style="background:;">
+  <hgroup>
+    <h2>Tablas cruzadas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">xt &lt;- xtabs(Freq ~ Gender + Admit,data=DF)
+xt
+</code></pre>
+
+<pre><code>##         Admit
+## Gender   Admitted Rejected
+##   Male       1198     1493
+##   Female      557     1278
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-94" style="background:;">
+  <hgroup>
+    <h2>Flat tables</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">warpbreaks$replicate &lt;- rep(1:9, len = 54)
+xt = xtabs(breaks ~.,data=warpbreaks)
+xt
+</code></pre>
+
+<pre><code>## , , replicate = 1
+## 
+##     tension
+## wool  L  M  H
+##    A 26 18 36
+##    B 27 42 20
+## 
+## , , replicate = 2
+## 
+##     tension
+## wool  L  M  H
+##    A 30 21 21
+##    B 14 26 21
+## 
+## , , replicate = 3
+## 
+##     tension
+## wool  L  M  H
+##    A 54 29 24
+##    B 29 19 24
+## 
+## , , replicate = 4
+## 
+##     tension
+## wool  L  M  H
+##    A 25 17 18
+##    B 19 16 17
+## 
+## , , replicate = 5
+## 
+##     tension
+## wool  L  M  H
+##    A 70 12 10
+##    B 29 39 13
+## 
+## , , replicate = 6
+## 
+##     tension
+## wool  L  M  H
+##    A 52 18 43
+##    B 31 28 15
+## 
+## , , replicate = 7
+## 
+##     tension
+## wool  L  M  H
+##    A 51 35 28
+##    B 41 21 15
+## 
+## , , replicate = 8
+## 
+##     tension
+## wool  L  M  H
+##    A 26 30 15
+##    B 20 39 16
+## 
+## , , replicate = 9
+## 
+##     tension
+## wool  L  M  H
+##    A 67 36 26
+##    B 44 29 28
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-95" style="background:;">
+  <hgroup>
+    <h2>Flat tables</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">ftable(xt)
+</code></pre>
+
+<pre><code>##              replicate  1  2  3  4  5  6  7  8  9
+## wool tension                                     
+## A    L                 26 30 54 25 70 52 51 26 67
+##      M                 18 21 29 17 12 18 35 30 36
+##      H                 36 21 24 18 10 43 28 15 26
+## B    L                 27 14 29 19 29 31 41 20 44
+##      M                 42 26 19 16 39 28 21 39 29
+##      H                 20 21 24 17 13 15 15 16 28
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-96" style="background:;">
+  <hgroup>
+    <h2>Tamaño de un conjunto de datos</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">fakeData = rnorm(1e5)
+object.size(fakeData)
+</code></pre>
+
+<pre><code>## 800040 bytes
+</code></pre>
+
+<pre><code class="r">print(object.size(fakeData),units=&quot;Mb&quot;)
+</code></pre>
+
+<pre><code>## 0.8 Mb
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-97" style="background:;">
+  <hgroup>
+    <h2>¿Por qué crear nuevas variables?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>A menudo, los datos brutos no tendrán un valor que buscamos</li>
+<li>Tendremos que transformar los datos para obtener los valores que nos gustaría</li>
+<li>Por lo general, vas a agregar esos valores a los data frame con los que se está trabajando</li>
+<li>Variables comunes a crear
+
+<ul>
+<li>Indiadores de perdidos </li>
+<li>&quot;Cortar por&quot; variables cuantitativas</li>
+<li>La aplicación de las transformaciones</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-98" style="background:;">
+  <hgroup>
+    <h2>Crendo secuencias</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><em>A veces se necesita un índice para el conjunto de datos</em></p>
+
+<pre><code class="r">s1 &lt;- seq(1,10,by=2) ; s1
+</code></pre>
+
+<pre><code>## [1] 1 3 5 7 9
+</code></pre>
+
+<pre><code class="r">s2 &lt;- seq(1,10,length=3); s2
+</code></pre>
+
+<pre><code>## [1]  1.0  5.5 10.0
+</code></pre>
+
+<pre><code class="r">x &lt;- c(1,3,8,25,100); seq(along = x)
+</code></pre>
+
+<pre><code>## [1] 1 2 3 4 5
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-99" style="background:;">
+  <hgroup>
+    <h2>Subconjuntos de variables</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">restData$nearMe = restData$neighborhood %in% c(&quot;Roland Park&quot;, &quot;Homeland&quot;)
+table(restData$nearMe)
+</code></pre>
+
+<pre><code>## 
+## FALSE  TRUE 
+##  1314    13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-100" style="background:;">
+  <hgroup>
+    <h2>Creando variables binarias</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">restData$zipWrong = ifelse(restData$zipCode &lt; 0, TRUE, FALSE)
+table(restData$zipWrong,restData$zipCode &lt; 0)
+</code></pre>
+
+<pre><code>##        
+##         FALSE TRUE
+##   FALSE  1326    0
+##   TRUE      0    1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-101" style="background:;">
+  <hgroup>
+    <h2>Creando variables categoricas</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">restData$zipGroups = cut(restData$zipCode,breaks=quantile(restData$zipCode))
+table(restData$zipGroups)
+</code></pre>
+
+<pre><code>## 
+## (-2.123e+04,2.12e+04]  (2.12e+04,2.122e+04] (2.122e+04,2.123e+04] 
+##                   337                   375                   282 
+## (2.123e+04,2.129e+04] 
+##                   332
+</code></pre>
+
+<pre><code class="r">table(restData$zipGroups,restData$zipCode)
+</code></pre>
+
+<pre><code>##                        
+##                         -21226 21201 21202 21205 21206 21207 21208 21209
+##   (-2.123e+04,2.12e+04]      0   136   201     0     0     0     0     0
+##   (2.12e+04,2.122e+04]       0     0     0    27    30     4     1     8
+##   (2.122e+04,2.123e+04]      0     0     0     0     0     0     0     0
+##   (2.123e+04,2.129e+04]      0     0     0     0     0     0     0     0
+##                        
+##                         21210 21211 21212 21213 21214 21215 21216 21217
+##   (-2.123e+04,2.12e+04]     0     0     0     0     0     0     0     0
+##   (2.12e+04,2.122e+04]     23    41    28    31    17    54    10    32
+##   (2.122e+04,2.123e+04]     0     0     0     0     0     0     0     0
+##   (2.123e+04,2.129e+04]     0     0     0     0     0     0     0     0
+##                        
+##                         21218 21220 21222 21223 21224 21225 21226 21227
+##   (-2.123e+04,2.12e+04]     0     0     0     0     0     0     0     0
+##   (2.12e+04,2.122e+04]     69     0     0     0     0     0     0     0
+##   (2.122e+04,2.123e+04]     0     1     7    56   199    19     0     0
+##   (2.123e+04,2.129e+04]     0     0     0     0     0     0    18     4
+##                        
+##                         21229 21230 21231 21234 21237 21239 21251 21287
+##   (-2.123e+04,2.12e+04]     0     0     0     0     0     0     0     0
+##   (2.12e+04,2.122e+04]      0     0     0     0     0     0     0     0
+##   (2.122e+04,2.123e+04]     0     0     0     0     0     0     0     0
+##   (2.123e+04,2.129e+04]    13   156   127     7     1     3     2     1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-102" style="background:;">
+  <hgroup>
+    <h2>Recorte más fácil</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(Hmisc)
+</code></pre>
+
+<pre><code>## Loading required package: grid
+## Loading required package: lattice
+## Loading required package: survival
+## Loading required package: Formula
+## 
+## Attaching package: &#39;Hmisc&#39;
+## 
+## The following objects are masked from &#39;package:plyr&#39;:
+## 
+##     is.discrete, summarize
+## 
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     format.pval, round.POSIXt, trunc.POSIXt, units
+</code></pre>
+
+<pre><code class="r">restData$zipGroups = cut2(restData$zipCode,g=4)
+table(restData$zipGroups)
+</code></pre>
+
+<pre><code>## 
+## [-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
+##            338            375            300            314
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-103" style="background:;">
+  <hgroup>
+    <h2>Creando variables tipo factor</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">restData$zcf &lt;- factor(restData$zipCode)
+restData$zcf[1:10]
+</code></pre>
+
+<pre><code>##  [1] 21206 21231 21224 21211 21223 21218 21205 21211 21205 21231
+## 32 Levels: -21226 21201 21202 21205 21206 21207 21208 21209 ... 21287
+</code></pre>
+
+<pre><code class="r">class(restData$zcf)
+</code></pre>
+
+<pre><code>## [1] &quot;factor&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-104" style="background:;">
+  <hgroup>
+    <h2>Varibles en nivesles del factor</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">yesno &lt;- sample(c(&quot;yes&quot;,&quot;no&quot;),size=10,replace=TRUE)
+yesnofac = factor(yesno,levels=c(&quot;yes&quot;,&quot;no&quot;))
+relevel(yesnofac,ref=&quot;no&quot;)
+</code></pre>
+
+<pre><code>##  [1] yes yes yes no  yes no  yes no  no  no 
+## Levels: no yes
+</code></pre>
+
+<pre><code class="r">as.numeric(yesnofac)
+</code></pre>
+
+<pre><code>##  [1] 1 1 1 2 1 2 1 2 2 2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-105" style="background:;">
+  <hgroup>
+    <h2>Recorte produce variables tipo factor</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(Hmisc)
+restData$zipGroups = cut2(restData$zipCode,g=4)
+table(restData$zipGroups)
+</code></pre>
+
+<pre><code>## 
+## [-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
+##            338            375            300            314
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-106" style="background:;">
+  <hgroup>
+    <h2>Uso de la función mutate</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(Hmisc); library(plyr)
+restData2 = mutate(restData,zipGroups=cut2(zipCode,g=4))
+table(restData2$zipGroups)
+</code></pre>
+
+<pre><code>## 
+## [-21226,21205) [ 21205,21220) [ 21220,21227) [ 21227,21287] 
+##            338            375            300            314
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-107" style="background:;">
+  <hgroup>
+    <h2>Transformaiones comunes</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><code>abs(x)</code> Valor absoluto</li>
+<li><code>sqrt(x)</code> Raiz Cuadrada</li>
+<li><code>ceiling(x)</code> ceiling(3.475) es 4</li>
+<li><code>floor(x)</code> floor(3.475) es 3</li>
+<li><code>round(x,digits=n)</code> round(3.475,digits=2) es 3.48</li>
+<li><code>signif(x,digits=n)</code> signif(3.475,digits=2) es 3.5</li>
+<li><code>cos(x), sin(x)</code> etc.</li>
+<li><code>log(x)</code> logaritmo natural </li>
+<li><code>log2(x)</code>, <code>log10(x)</code> otros logaritmos comunes </li>
+<li><code>exp(x)</code> exponenciación de x</li>
+</ul>
+
+<p><a href="http://www.biostat.jhsph.edu/%7Eajaffe/lec_winterR/Lecture%202.pdf">http://www.biostat.jhsph.edu/~ajaffe/lec_winterR/Lecture%202.pdf</a>
+<a href="http://statmethods.net/management/functions.html">http://statmethods.net/management/functions.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-108" style="background:;">
+  <hgroup>
+    <h2>Comenzando con reshaping</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(reshape2)
+head(mtcars)
+</code></pre>
+
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-109" style="background:;">
+  <hgroup>
+    <h2>Melting (fusionando) data frames</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">mtcars$carname &lt;- rownames(mtcars)
+carMelt &lt;- melt(mtcars,id=c(&quot;carname&quot;,&quot;gear&quot;,&quot;cyl&quot;),measure.vars=c(&quot;mpg&quot;,&quot;hp&quot;))
+head(carMelt,n=3)
+</code></pre>
+
+<pre><code>##         carname gear cyl variable value
+## 1     Mazda RX4    4   6      mpg  21.0
+## 2 Mazda RX4 Wag    4   6      mpg  21.0
+## 3    Datsun 710    4   4      mpg  22.8
+</code></pre>
+
+<pre><code class="r">tail(carMelt,n=3)
+</code></pre>
+
+<pre><code>##          carname gear cyl variable value
+## 62  Ferrari Dino    5   6       hp   175
+## 63 Maserati Bora    5   8       hp   335
+## 64    Volvo 142E    4   4       hp   109
+</code></pre>
+
+<p><a href="http://www.statmethods.net/management/reshape.html">http://www.statmethods.net/management/reshape.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-110" style="background:;">
+  <hgroup>
+    <h2>Casting data frames</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">cylData &lt;- dcast(carMelt, cyl ~ variable)
+cylData
+</code></pre>
+
+<pre><code>##   cyl mpg hp
+## 1   4  11 11
+## 2   6   7  7
+## 3   8  14 14
+</code></pre>
+
+<pre><code class="r">cylData &lt;- dcast(carMelt, cyl ~ variable,mean)
+cylData
+</code></pre>
+
+<pre><code>##   cyl      mpg        hp
+## 1   4 26.66364  82.63636
+## 2   6 19.74286 122.28571
+## 3   8 15.10000 209.21429
+</code></pre>
+
+<p><a href="http://www.statmethods.net/management/reshape.html">http://www.statmethods.net/management/reshape.html</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-111" style="background:;">
+  <hgroup>
+    <h2>Promediando valores</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">head(InsectSprays)
+</code></pre>
+
+<pre><code>##   count spray
+## 1    10     A
+## 2     7     A
+## 3    20     A
+## 4    14     A
+## 5    14     A
+## 6    12     A
+</code></pre>
+
+<pre><code class="r">tapply(InsectSprays$count,InsectSprays$spray,sum)
+</code></pre>
+
+<pre><code>##   A   B   C   D   E   F 
+## 174 184  25  59  42 200
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-112" style="background:;">
+  <hgroup>
+    <h2>Otra forma - split</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">spIns =  split(InsectSprays$count,InsectSprays$spray)
+spIns
+</code></pre>
+
+<pre><code>## $A
+##  [1] 10  7 20 14 14 12 10 23 17 20 14 13
+## 
+## $B
+##  [1] 11 17 21 11 16 14 17 17 19 21  7 13
+## 
+## $C
+##  [1] 0 1 7 2 3 1 2 1 3 0 1 4
+## 
+## $D
+##  [1]  3  5 12  6  4  3  5  5  5  5  2  4
+## 
+## $E
+##  [1] 3 5 3 5 3 6 1 1 3 2 6 4
+## 
+## $F
+##  [1] 11  9 15 22 15 16 13 10 26 26 24 13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-113" style="background:;">
+  <hgroup>
+    <h2>Otra forma - apply</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">sprCount = lapply(spIns,sum)
+sprCount
+</code></pre>
+
+<pre><code>## $A
+## [1] 174
+## 
+## $B
+## [1] 184
+## 
+## $C
+## [1] 25
+## 
+## $D
+## [1] 59
+## 
+## $E
+## [1] 42
+## 
+## $F
+## [1] 200
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-114" style="background:;">
+  <hgroup>
+    <h2>Otra forma - combine</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">unlist(sprCount)
+</code></pre>
+
+<pre><code>##   A   B   C   D   E   F 
+## 174 184  25  59  42 200
+</code></pre>
+
+<pre><code class="r">sapply(spIns,sum)
+</code></pre>
+
+<pre><code>##   A   B   C   D   E   F 
+## 174 184  25  59  42 200
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-115" style="background:;">
+  <hgroup>
+    <h2>Datos de revisión por pares</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">reviews = read.csv(&quot;./data/reviews.csv&quot;); solutions &lt;- read.csv(&quot;./data/solutions.csv&quot;)
+head(reviews,2)
+</code></pre>
+
+<pre><code>##   id solution_id reviewer_id      start       stop time_left accept
+## 1  1           3          27 1304095698 1304095758      1754      1
+## 2  2           4          22 1304095188 1304095206      2306      1
+</code></pre>
+
+<pre><code class="r">head(solutions,2)
+</code></pre>
+
+<pre><code>##   id problem_id subject_id      start       stop time_left answer
+## 1  1        156         29 1304095119 1304095169      2343      B
+## 2  2        269         25 1304095119 1304095183      2329      C
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-116" style="background:;">
+  <hgroup>
+    <h2>Fusionado de datos - merge()</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Fusiona data frames</li>
+<li>Parámetros importantes: <em>x</em>,<em>y</em>,<em>by</em>,<em>by.x</em>,<em>by.y</em>,<em>all</em></li>
+</ul>
+
+<pre><code class="r">names(reviews)
+</code></pre>
+
+<pre><code>## [1] &quot;id&quot;          &quot;solution_id&quot; &quot;reviewer_id&quot; &quot;start&quot;       &quot;stop&quot;       
+## [6] &quot;time_left&quot;   &quot;accept&quot;
+</code></pre>
+
+<pre><code class="r">names(solutions)
+</code></pre>
+
+<pre><code>## [1] &quot;id&quot;         &quot;problem_id&quot; &quot;subject_id&quot; &quot;start&quot;      &quot;stop&quot;      
+## [6] &quot;time_left&quot;  &quot;answer&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-117" style="background:;">
+  <hgroup>
+    <h2>Fusionado de datos - merge()</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">mergedData = merge(reviews,solutions,by.x=&quot;solution_id&quot;,by.y=&quot;id&quot;,all=TRUE)
+head(mergedData)
+</code></pre>
+
+<pre><code>##   solution_id id reviewer_id    start.x     stop.x time_left.x accept
+## 1           1  4          26 1304095267 1304095423        2089      1
+## 2           2  6          29 1304095471 1304095513        1999      1
+## 3           3  1          27 1304095698 1304095758        1754      1
+## 4           4  2          22 1304095188 1304095206        2306      1
+## 5           5  3          28 1304095276 1304095320        2192      1
+## 6           6 16          22 1304095303 1304095471        2041      1
+##   problem_id subject_id    start.y     stop.y time_left.y answer
+## 1        156         29 1304095119 1304095169        2343      B
+## 2        269         25 1304095119 1304095183        2329      C
+## 3         34         22 1304095127 1304095146        2366      C
+## 4         19         23 1304095127 1304095150        2362      D
+## 5        605         26 1304095127 1304095167        2345      A
+## 6        384         27 1304095131 1304095270        2242      C
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-118" style="background:;">
+  <hgroup>
+    <h2>Por defecto - fusionando todas los nombres de columnas comunes</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">intersect(names(solutions),names(reviews))
+</code></pre>
+
+<pre><code>## [1] &quot;id&quot;        &quot;start&quot;     &quot;stop&quot;      &quot;time_left&quot;
+</code></pre>
+
+<pre><code class="r">mergedData2 = merge(reviews,solutions,all=TRUE)
+head(mergedData2)
+</code></pre>
+
+<pre><code>##   id      start       stop time_left solution_id reviewer_id accept
+## 1  1 1304095119 1304095169      2343          NA          NA     NA
+## 2  1 1304095698 1304095758      1754           3          27      1
+## 3  2 1304095119 1304095183      2329          NA          NA     NA
+## 4  2 1304095188 1304095206      2306           4          22      1
+## 5  3 1304095127 1304095146      2366          NA          NA     NA
+## 6  3 1304095276 1304095320      2192           5          28      1
+##   problem_id subject_id answer
+## 1        156         29      B
+## 2         NA         NA   &lt;NA&gt;
+## 3        269         25      C
+## 4         NA         NA   &lt;NA&gt;
+## 5         34         22      C
+## 6         NA         NA   &lt;NA&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-119" style="background:;">
+  <hgroup>
+    <h2>Utilizando join en el paquete plyr</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">df1 = data.frame(id=sample(1:10),x=rnorm(10))
+df2 = data.frame(id=sample(1:10),y=rnorm(10))
+arrange(join(df1,df2),id)
+</code></pre>
+
+<pre><code>## Joining by: id
+</code></pre>
+
+<pre><code>##    id           x          y
+## 1   1  0.67458794  0.9995930
+## 2   2  1.48010185  2.6998482
+## 3   3  0.89701115  1.0070288
+## 4   4  2.15231332 -0.7388428
+## 5   5 -1.05016804  1.9963144
+## 6   6 -0.29982608 -1.8963536
+## 7   7 -0.30831146 -0.1263317
+## 8   8 -0.02147554 -0.3393521
+## 9   9  0.46534390 -1.0178761
+## 10 10  0.91803856  1.7473499
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-120" style="background:;">
+  <hgroup>
+    <h2>Si se tiene multiples data frames</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">df1 = data.frame(id=sample(1:10),x=rnorm(10))
+df2 = data.frame(id=sample(1:10),y=rnorm(10))
+df3 = data.frame(id=sample(1:10),z=rnorm(10))
+dfList = list(df1,df2,df3)
+join_all(dfList)
+</code></pre>
+
+<pre><code>## Joining by: id
+## Joining by: id
+</code></pre>
+
+<pre><code>##    id           x          y          z
+## 1  10 -1.42659738  2.8547047 -0.5563688
+## 2   6 -0.30153092  0.8899654 -0.6123399
+## 3   3 -0.77924959  1.4288049 -0.9235868
+## 4   9 -1.06584640  0.3985521  1.0923723
+## 5   4  0.07436382 -0.3779636  0.9849817
+## 6   5  2.04580330  0.4062567  1.1704015
+## 7   1  0.64047066  1.6631246 -1.1863767
+## 8   8  1.16579466  1.2352919 -0.5200716
+## 9   7  0.92514533  1.5570227  1.0485269
+## 10  2 -0.75025267  0.1238878  1.0499107
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-121" style="background:;">
+  <hgroup>
+    <h2>Qué es el control de versiones?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><q>El control de versiones es un sistema que registra los cambios en un archivo o conjunto de archivos que se dan con el tiempo para que más tarde puedas recuperar versiones específicas.</q></p>
+
+<p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">http://git-scm.com/book/en/Getting-Started-About-Version-Control</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-122" style="background:;">
+  <hgroup>
+    <h2>Qué es el control de versiones?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Muchos de nosotros constantemente creamos algo, lo guardamos, lo cambiamos y luego lo guardamos de nuevo</li>
+<li>Control versión (o revisión)  es un medio de la gestión de este proceso de una manera confiable y eficiente</li>
+<li>Especialmente cuando colaboramos con otros </li>
+</ul>
+
+<p><a href="http://en.wikipedia.org/wiki/Revision_control">http://en.wikipedia.org/wiki/Revision_control</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-123" style="background:;">
+  <hgroup>
+    <h2>Que es Git?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><q>Git es un sistema gratuito y de código abierto distribuido de control de versiones diseñado para manejar todo, desde pequeñas a muy grandes proyectos la velocidad y la eficiencia necesarias.</q></p>
+
+<p><a href="http://git-scm.com/">http://git-scm.com/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-124" style="background:;">
+  <hgroup>
+    <h2>Que es Git?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Creado por la misma persona que desarrollo Linux</li>
+<li>Es la más importante implementación del control de versiones hoy </li>
+<li>Todo es guardado en tu computador local </li>
+<li>Es operado desd la linea de comandos </li>
+</ul>
+
+<p><a href="http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git">http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-125" style="background:;">
+  <hgroup>
+    <h2>Que es GitHub?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><q>GitHub es un servicio de alojamiento basado en la web para proyectos de desarrollo de software que utilizan el sistema de control de versiones Git.</q></p>
+
+<p><a href="http://en.wikipedia.org/wiki/GitHub">http://en.wikipedia.org/wiki/GitHub</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-126" style="background:;">
+  <hgroup>
+    <h2>Que es GitHub?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Permite a los usarios &quot;push&quot; and &quot;pull&quot; sus repositorios locales desde y hacia los repositorios web</li>
+<li>Proporciona a los usuarios una página de inicio que muestra sus repositorios públicos</li>
+<li>Repositorios de los usuarios están respaldados en el servidor de GitHub en caso de que algo le suceda a las copias locales</li>
+<li>Aspecto social permite que los usuarios se sigan y compartan proyectos</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-127" style="background:;">
+  <hgroup>
+    <h2>Configurar una cuenta de GitHub</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Vayan a la página de inicio de GitHub <a href="https://github.com/">https://github.com/</a></li>
+<li>Entren un nombre de usuario, email, y contraseña y hagan clic en &quot;Sign up for GitHub&quot;</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-128" style="background:;">
+  <hgroup>
+    <h2>Su perfil en GitHub</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Su perfil es donde se muestra la totalidad de su actividad en GitHub</li>
+<li>Le permite mostrar a otras personas lo que eres y lo que está trabajando</li>
+<li>Mientras trabaja en más y más proyectos, su perfil se convierte en un portafolio de su trabajo</li>
+<li>Por último, si hace clic en &quot;Editar su perfil&quot; en la parte superior derecha de la pantalla se puede añadir un poco de información básica acerca de ti a tu perfil</li>
+<li>Esto es totalmente opcional, pero si haces un buen trabajo, debes tomar algo de crédito por ello!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-129" style="background:;">
+  <hgroup>
+    <h2>Recapitulando: Git vs. GitHub</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>No necesitas GitHub para usar Git</li>
+<li>Git = Local (en tu computador); GitHub = Remoto (en la web)</li>
+<li>GitHub te permite:
+
+<ol>
+<li>Compartir tus repositorios con otros </li>
+<li>Acceso a reposotorios de otros usuarios </li>
+<li>Guardar copias remotas de los repositorios (en el servidor de GitHub) en caso de que algo le suceda a sus copias locales (en el equipo)</li>
+</ol></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-130" style="background:;">
+  <hgroup>
+    <h2>Creando un reposotorio de GitHub</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Existen dos metodos para crear un repositorio en GitHub:
+
+<ol>
+<li>Comience un repositorio desde cero</li>
+<li>&quot;Fork&quot; el repositorio de otro usuario</li>
+</ol></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Contenido'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Contenido'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Contenido'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Contenido'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Contenido'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Contenido'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Por que minería de datos?'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Que es la minería de datos?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Minería de datos: Un proceso de descubrimiento del conocimiento (kdd)'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Minería de datos: Una visión multidimensional'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Punto de vista de los datos: ¿Qué tipo de datos?'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Punto de vista del conocimiento: Conocimiento a extraer'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Punto de vista metdológico: Confluencia de multiples disciplinas'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Puntos de vista aplicativo: Diversidad de aplicaciones'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Get/set tu directorio de trabajo'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Comprobación y creación de directorios'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Obteniendo datos de internet - download.file()'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Ejemplo - Baltimore camera data'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Ejemplo - Baltimore camera data'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Descargando un archivo de la web'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Algunas notas sobre download.file()'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='XML'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Etiquetas, elementos y atributos'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Ejemplo de un archivo XML'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Leer el archivo en R'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Acceder directamente a partes del documento XML'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Extraer programáticamente partes del archivo'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='XPath'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Obtener los elementos en el menú y sus precios'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Otro ejemplo'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Viendo el código fuente'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Extrayendo el contenido por atributos'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Notas y más recursos'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='JSON'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Example JSON file'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Leyendo datos de JSON {jsonlite package}'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Objetos anidados en JSON'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Escribiendo data frames como JSON'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Convertir de nuevo a JSON'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Otros recursos'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Application programming interfaces'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='Creando una aplicación'>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Creando una aplicación'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Creando una aplicación'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Accediendo Twitter desde R'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Accediendo Twitter desde R'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Accediendo Twitter desde R'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Accediendo Twitter desde R'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Accediendo Twitter desde R (WordCloud)'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Accediendo Twitter desde R (WordCloud)'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Un vistazo general a la documentación'>
+         51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='MySQL'>
+         52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='Ejemplo de la estructura'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='Primer paso - Instalar MySQL'>
+         54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Segundo paso - Instalar RMySQL'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='Ejemplo - Base de datos UCSC'>
+         56
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=57 title='UCSC MySQL'>
+         57
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=58 title='Conectando y listando las bases de datos'>
+         58
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=59 title='Realizando la conexión con hg19 y listando sus tablas'>
+         59
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=60 title='Obtener las dimensiones de una tabla específica'>
+         60
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=61 title='Seleccionar un subconjunto especifico'>
+         61
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=62 title='Nunca olvides cerrar la conexión!'>
+         62
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=63 title='Otros recursos'>
+         63
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=64 title='Hay un paquete para eso'>
+         64
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=65 title='Interactuar de manera más directa con los archivos'>
+         65
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=66 title='Paquetes externos'>
+         66
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=67 title='Ejemplos de otros paquetes de base de datos'>
+         67
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=68 title='Leyendo imagenes'>
+         68
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=69 title='Leyendo datos GIS'>
+         69
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=70 title='Leyendo datos de música'>
+         70
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=71 title='Indexado - breve repaso'>
+         71
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=72 title='Indexado - breve repaso'>
+         72
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=73 title='Logicos'>
+         73
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=74 title='Tratando con datos faltantes'>
+         74
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=75 title='Ordenado'>
+         75
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=76 title='Ordenando'>
+         76
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=77 title='Ordenando'>
+         77
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=78 title='Ordenando con plyr'>
+         78
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=79 title='Agregando filas y columnas'>
+         79
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=80 title='Agregando filas y columnas'>
+         80
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=81 title='Obteniendo datos de la web'>
+         81
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=82 title='Una mirada a los datos'>
+         82
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=83 title='Haciendo un summary'>
+         83
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=84 title='Información más detallada'>
+         84
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=85 title='Quantiles de las variables cuantitativas'>
+         85
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=86 title='Realizando tablas'>
+         86
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=87 title='Realizando tablas'>
+         87
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=88 title='Revisando por datos faltantes'>
+         88
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=89 title='Suma de filas y columnas'>
+         89
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=90 title='Valores con caractrísticas especificas'>
+         90
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=91 title='Valores con caractrísticas especificas'>
+         91
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=92 title='Tablas cruzadas'>
+         92
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=93 title='Tablas cruzadas'>
+         93
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=94 title='Flat tables'>
+         94
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=95 title='Flat tables'>
+         95
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=96 title='Tamaño de un conjunto de datos'>
+         96
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=97 title='¿Por qué crear nuevas variables?'>
+         97
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=98 title='Crendo secuencias'>
+         98
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=99 title='Subconjuntos de variables'>
+         99
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=100 title='Creando variables binarias'>
+         100
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=101 title='Creando variables categoricas'>
+         101
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=102 title='Recorte más fácil'>
+         102
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=103 title='Creando variables tipo factor'>
+         103
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=104 title='Varibles en nivesles del factor'>
+         104
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=105 title='Recorte produce variables tipo factor'>
+         105
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=106 title='Uso de la función mutate'>
+         106
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=107 title='Transformaiones comunes'>
+         107
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=108 title='Comenzando con reshaping'>
+         108
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=109 title='Melting (fusionando) data frames'>
+         109
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=110 title='Casting data frames'>
+         110
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=111 title='Promediando valores'>
+         111
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=112 title='Otra forma - split'>
+         112
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=113 title='Otra forma - apply'>
+         113
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=114 title='Otra forma - combine'>
+         114
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=115 title='Datos de revisión por pares'>
+         115
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=116 title='Fusionado de datos - merge()'>
+         116
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=117 title='Fusionado de datos - merge()'>
+         117
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=118 title='Por defecto - fusionando todas los nombres de columnas comunes'>
+         118
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=119 title='Utilizando join en el paquete plyr'>
+         119
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=120 title='Si se tiene multiples data frames'>
+         120
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=121 title='Qué es el control de versiones?'>
+         121
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=122 title='Qué es el control de versiones?'>
+         122
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=123 title='Que es Git?'>
+         123
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=124 title='Que es Git?'>
+         124
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=125 title='Que es GitHub?'>
+         125
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=126 title='Que es GitHub?'>
+         126
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=127 title='Configurar una cuenta de GitHub'>
+         127
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=128 title='Su perfil en GitHub'>
+         128
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=129 title='Recapitulando: Git vs. GitHub'>
+         129
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=130 title='Creando un reposotorio de GitHub'>
+         130
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
